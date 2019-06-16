@@ -1,0 +1,16 @@
+{
+  "attr-bans": [
+    "align",
+    "background",
+    "bgcolor",
+    "border",
+    "frameborder",
+    "longdesc",
+    "marginwidth",
+    "marginheight",
+    "scrolling",
+    "style"
+  ],
+  "class-style": "dash",
+  "indent-width": 2
+}
