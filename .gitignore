@@ -1,5 +1,3 @@
-Thumbs.db
-db.json
+dist/css/main.bundle.css
+dist/js/bundle.js
 node_modules/
-public/
-.deploy*/

@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+$blue: #083088;
+$yellow: #ebb700;
+
+$primary: $blue;
+$info: $yellow;
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/content.sass";
+@import "../node_modules/bulma/sass/elements/image.sass";
