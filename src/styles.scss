@@ -12,6 +12,13 @@ $info: $yellow;
 
 $section-padding: 1rem 0;
 
+$hr-background-color: $info !default;
+$hr-height: 4px !default;
+$hr-margin: 15px 0 0 0 !default;
+hr {
+  width: 68px;
+}
+
 @import '../node_modules/bulma/sass/utilities/_all.sass';
 @import '../node_modules/bulma/sass/base/_all.sass';
 @import '../node_modules/bulma/sass/components/card.sass';
@@ -21,26 +28,41 @@ $section-padding: 1rem 0;
 @import '../node_modules/bulma/sass/elements/container.sass';
 @import '../node_modules/bulma/sass/elements/content.sass';
 @import '../node_modules/bulma/sass/elements/image.sass';
-
-// $title-size: $size-4;
-
 @import '../node_modules/bulma/sass/elements/title.sass';
+@import '../node_modules/bulma/sass/layout/footer.sass';
 @import '../node_modules/bulma/sass/layout/section.sass';
+@import '../node_modules/bulma-quickview/dist/css/bulma-quickview.sass';
 
 body {
   background-color: #f6f6f6f6;
 }
 
+nav {
+  height: 52px;
+}
+
 article {
   padding: 0 16px;
+  @include tablet {
+    padding: 0 24px;
+  }
   margin: 20px 0;
 }
 
-.separator {
-  background-color: $info;
-  height: 4px;
-  width: 68px;
-  margin-top: 15px;
+.is-absolute {
+  position: absolute;
+}
+
+.is-pin-left {
+  left: 0;
+}
+
+.is-justify-center {
+  justify-content: center;
+}
+
+.is-column {
+  flex-direction: column;
 }
 
 .round-top {
@@ -56,6 +78,10 @@ article {
 
 .mb-2 {
   margin-bottom: 8px;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 .p-4 {
   padding: 16px;
