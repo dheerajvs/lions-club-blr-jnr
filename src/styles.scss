@@ -22,6 +22,7 @@ hr {
 @import '../node_modules/bulma/sass/utilities/_all.sass';
 @import '../node_modules/bulma/sass/base/_all.sass';
 @import '../node_modules/bulma/sass/components/card.sass';
+@import '../node_modules/bulma/sass/components/menu.sass';
 @import '../node_modules/bulma/sass/components/navbar.sass';
 @import '../node_modules/bulma/sass/elements/box.sass';
 @import '../node_modules/bulma/sass/elements/button.sass';
@@ -29,6 +30,7 @@ hr {
 @import '../node_modules/bulma/sass/elements/content.sass';
 @import '../node_modules/bulma/sass/elements/image.sass';
 @import '../node_modules/bulma/sass/elements/title.sass';
+@import '../node_modules/bulma/sass/grid/columns.sass';
 @import '../node_modules/bulma/sass/layout/footer.sass';
 @import '../node_modules/bulma/sass/layout/section.sass';
 @import '../node_modules/bulma-quickview/dist/css/bulma-quickview.sass';
@@ -57,19 +59,8 @@ article {
   left: 0;
 }
 
-.is-justify-center {
-  justify-content: center;
-}
-
-.is-column {
-  flex-direction: column;
-}
-
 .round-top {
-  border-top-left-radius: $radius-large;
-  border-top-right-radius: $radius-large;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: $radius-large $radius-large 0 0;
 }
 
 .tablet-width {

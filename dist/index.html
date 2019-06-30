@@ -12,122 +12,175 @@
   </head>
 
   <body>
-    <nav class="has-background-white" role="navigation"
-         aria-label="main navigation">
-      <div class="is-flex is-justify-center">
-        <a role="button" class="navbar-burger burger is-absolute is-pin-left"
-           aria-label="menu" aria-expanded="false" data-show="quickview"
-           data-target="quickviewDefault">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-        <a href="/">
-          <img src="/img/lci-logo.svg" alt="Logo" width="60">
-        </a>
-      </div>
-
-      <div id="quickviewDefault" class="quickview is-left">
-        <header class="quickview-header">
-          <p class="title">Quickview title</p>
-          <span class="delete" data-dismiss="quickview"></span>
-        </header>
-
-        <div class="quickview-body">
-          <div class="quickview-block">
-            ...
-          </div>
+    <div class="columns is-centered is-gapless">
+      <nav class="column is-one-fifth has-background-white" role="navigation"
+           aria-label="main navigation">
+        <div class="columns is-centered is-mobile">
+          <a role="button" class="navbar-burger burger is-absolute is-pin-left"
+             aria-label="menu" aria-expanded="false" data-show="quickview"
+             data-target="quickviewDefault">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+          <a class="column is-narrow" href="/">
+            <img src="/img/lci-logo.svg" alt="Logo" width="60">
+          </a>
         </div>
 
-        <footer class="quickview-footer">
-        </footer>
-      </div>
-    </nav>
+        <div id="quickviewDefault" class="quickview is-left">
+          <header class="quickview-header">
+            <a class="" href="/">
+              <img src="/img/lci-logo.svg" alt="Logo" width="60">
+            </a>
+            <span class="delete" data-dismiss="quickview"></span>
+          </header>
 
-    <main class="container tablet-width">
-      <article>
-        <header class="title">
-          <h2>Lions Club of Bangalore Jayanagar</h2>
-          <hr>
-        </header>
-        <section class="section">
-          <div class="box px-0 pt-0">
-            <figure class="image">
-              <img class="round-top" src="/img/club.jpg" alt="Club Photo">
-            </figure>
-            <p class="p-4">
-              Lions Club of Bangalore Jayanagar (LCBJ) district 317A was
-              chartered in
-              <time datetime="1982-08-28">1982</time>.
-              <a class="button is-small is-light" href="#">Read More…</a>
-            </p>
-            <footer class="buttons is-centered">
+          <div class="quickview-body">
+            <div class="quickview-block">
+              <div class="menu">
+                <ul class="menu-list">
+                  <li><a class="is-active" href="">Home</a></li>
+                  <li><a href="">About LCBJ</a></li>
+                  <li><a href="">Service Stories</a></li>
+                  <li><a href="">Asha Deep Senior Citizen Home</a></li>
+                  <li><a href="">Contributing</a></li>
+                  <li><a href="">CSR</a></li>
+                  <li><a href="">Office Bearers</a></li>
+                  <li><a href="">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <footer class="quickview-footer">
+            <div class="buttons is-centered">
               <a class="button is-primary" href="#">Join us</a>
               <a class="button is-info has-text-black" href="#">Donate</a>
-            </footer>
-          </div>
-        </section>
-      </article>
+            </div>
+          </footer>
+        </div>
+      </nav>
 
-      <article class="has-background-primary py-6">
-        <header class="title">
-          <h2 class="has-text-light">Service Stories</h2>
+      <main class="column is-three-fifths tablet-width">
+        <article>
+          <header class="title">
+            <h2>Lions Club of Bangalore Jayanagar</h2>
+            <hr>
+          </header>
+          <section class="section">
+            <div class="box px-0 pt-0">
+              <figure class="image">
+                <img class="round-top" src="/img/club.jpg" alt="Club Photo">
+              </figure>
+              <p class="p-4">
+                Lions Club of Bangalore Jayanagar (LCBJ) district 317A was
+                chartered in
+                <time datetime="1982-08-28">1982</time>.
+                <a class="button is-small is-light" href="#">Read More…</a>
+              </p>
+              <footer class="buttons is-centered">
+                <a class="button is-primary" href="#">Join us</a>
+                <a class="button is-info has-text-black" href="#">Donate</a>
+              </footer>
+            </div>
+          </section>
+        </article>
+
+        <article class="has-background-primary py-6">
+          <header class="title">
+            <h2 class="has-text-light">Service Stories</h2>
+            <hr>
+          </header>
+          <section class="section mb-2">
+            <div class="box px-0 pt-0">
+              <figure class="image">
+                <img class="round-top" src="/img/ashadeep.jpg"
+                     alt="Asha Deep senior citizen home">
+              </figure>
+              <p class="p-4">
+                The LCBJ Service Trust runs Asha Deep Senior Citizen Home, which
+                is situated in Thathaguni, Kanakapura Road.
+              </p>
+              <footer class="buttons is-centered">
+                <a class="button is-info has-text-black" href="#">Read More…</a>
+              </footer>
+            </div>
+          </section>
+
+          <footer class="buttons is-centered">
+            <a class="button is-primary is-inverted is-outlined" href="#">
+              Read More Stories
+            </a>
+          </footer>
+        </article>
+
+        <article>
+          <header class="title">
+            <h2>Asha Deep Senior Citizen Home</h2>
+            <hr>
+          </header>
+          <section class="section">
+            <div class="box px-0 pt-0">
+              <figure class="image">
+                <img class="round-top" src="/img/ashadeep.jpg"
+                     alt="Asha Deep senior citizen home">
+              </figure>
+              <p class="p-4">
+                The LCBJ Service Trust runs Asha Deep Senior Citizen Home, which
+                is situated in Thathaguni, Kanakapura Road.
+              </p>
+              <footer class="buttons is-centered">
+                <a class="button is-primary" href="#">Read More…</a>
+              </footer>
+            </div>
+          </section>
+        </article>
+
+        <article class="has-background-primary py-6">
+          <header class="title">
+            <h2 class="has-text-light">Office Bearers</h2>
+            <hr>
+          </header>
+          <section class="section">
+            <div class="box px-0 pt-0">
+              <p class="p-4">
+                Office Bearers
+              </p>
+              <footer class="buttons is-centered">
+                <a class="button is-primary" href="#">Read More…</a>
+              </footer>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <header class="title">
+            <h2>How You Can Contribute</h2>
+            <hr>
+          </header>
+          <section class="section">
+            <div class="box px-0 pt-0">
+              <p class="p-4">
+                Contribution
+              </p>
+              <footer class="buttons is-centered">
+                <a class="button is-primary" href="#">Read More…</a>
+              </footer>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <aside class="column is-one-fifth">
+        <header class="title is-5">
+          <h2>Lions Club International</h2>
           <hr>
         </header>
-        <section class="section mb-2">
-          <div class="box px-0 pt-0">
-            <figure class="image">
-              <img class="round-top" src="/img/ashadeep.jpg"
-                   alt="Asha Deep senior citizen home">
-            </figure>
-            <p class="p-4">
-              The LCBJ Service Trust runs Asha Deep Senior Citizen Home, which
-              is situated in Thathaguni, Kanakapura Road.
-            </p>
-            <footer class="buttons is-centered">
-              <a class="button is-info has-text-black" href="#">Read More…</a>
-            </footer>
-          </div>
+        <section>
         </section>
-
-        <footer class="buttons is-centered">
-          <a class="button is-primary is-inverted is-outlined" href="#">
-            Read More Stories
-          </a>
-        </footer>
-      </article>
-
-      <article>
-        <header class="title">
-          <h2>Asha Deep Senior Citizen Home</h2>
-          <hr>
-        </header>
-        <section class="section">
-          <div class="box px-0 pt-0">
-            <figure class="image">
-              <img class="round-top" src="/img/ashadeep.jpg"
-                   alt="Asha Deep senior citizen home">
-            </figure>
-            <p class="p-4">
-              The LCBJ Service Trust runs Asha Deep Senior Citizen Home, which
-              is situated in Thathaguni, Kanakapura Road.
-            </p>
-            <footer class="buttons is-centered">
-              <a class="button is-primary" href="#">Read More…</a>
-            </footer>
-          </div>
-        </section>
-      </article>
-    </main>
-
-    <aside>
-      <header class="title is-5">
-        <h2>Lions Club International</h2>
-        <hr>
-      </header>
-      <section>
-      </section>
-    </aside>
+      </aside>
+    </div>
 
     <footer class="footer">
       <div class="content has-text-centered">
