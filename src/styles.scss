@@ -38,6 +38,7 @@ $menu-list-link-padding: 0.5em 1.75em;
 
 $quickview-shadow: none;
 @import '../node_modules/bulma-quickview/dist/css/bulma-quickview.sass';
+@import '../node_modules/bulma-carousel/src/sass/index.sass';
 
 body {
   background-color: #f6f6f6f6;
@@ -68,6 +69,26 @@ article {
     padding: 0 24px;
   }
   margin: 20px 0;
+}
+section.slider-container {
+  margin-bottom: 8px;
+}
+.slider-container .slider-container {
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-bottom: 26px;
+}
+.slider-item {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.slider-navigation-previous,
+.slider-navigation-next {
+  background-color: $info;
+  border-color: $info;
+}
+.slider-pagination .slider-page {
+  background: $info;
 }
 
 .lci {

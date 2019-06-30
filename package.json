@@ -21,6 +21,7 @@
   "homepage": "https://gitlab.com/dheerajvs/lionsclub#readme",
   "devDependencies": {
     "bulma": "^0.7.5",
+    "bulma-carousel": "^4.0.4",
     "bulma-quickview": "^2.0.0",
     "css-loader": "^3.0.0",
     "mini-css-extract-plugin": "^0.7.0",
