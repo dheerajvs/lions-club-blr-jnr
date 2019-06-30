@@ -45,11 +45,17 @@ body {
 }
 
 nav {
+  position: sticky;
+  top: -$column-gap;
+  z-index: 1;
+  @include mobile {
+    background-color: $primary;
+    height: 56px;
+  }
   @include tablet {
+    background-color: white;
     max-width: 240px;
     align-self: flex-start;
-    position: sticky;
-    top: -$column-gap;
   }
   .quickview {
     @include tablet {
