@@ -12,10 +12,11 @@
   </head>
 
   <body>
-    <div class="columns is-centered is-gapless">
-      <nav class="column is-one-fifth has-background-white" role="navigation"
-           aria-label="main navigation">
-        <div class="columns is-centered is-mobile">
+    <div
+         class="columns is-centered is-variable is-0-mobile is-0-tablet is-2-desktop">
+      <nav class="column is-one-quarter is-one-fifth-desktop has-background-white"
+           role="navigation" aria-label="main navigation">
+        <div class="columns is-centered is-mobile is-hidden-tablet">
           <a role="button" class="navbar-burger burger is-absolute is-pin-left"
              aria-label="menu" aria-expanded="false" data-show="quickview"
              data-target="quickviewDefault">
@@ -29,40 +30,41 @@
         </div>
 
         <div id="quickviewDefault" class="quickview is-left">
-          <header class="quickview-header">
-            <a class="" href="/">
+          <header class="quickview-header columns is-centered is-marginless">
+            <a class="column is-narrow" href="/">
               <img src="/img/lci-logo.svg" alt="Logo" width="60">
             </a>
-            <span class="delete" data-dismiss="quickview"></span>
+            <span class="delete is-hidden-tablet"
+                  data-dismiss="quickview"></span>
           </header>
 
-          <div class="quickview-body">
-            <div class="quickview-block">
-              <div class="menu">
-                <ul class="menu-list">
-                  <li><a class="is-active" href="">Home</a></li>
-                  <li><a href="">About LCBJ</a></li>
-                  <li><a href="">Service Stories</a></li>
-                  <li><a href="">Asha Deep Senior Citizen Home</a></li>
-                  <li><a href="">Contributing</a></li>
-                  <li><a href="">CSR</a></li>
-                  <li><a href="">Office Bearers</a></li>
-                  <li><a href="">Contact us</a></li>
-                </ul>
-              </div>
+          <div class="quickview-body px-4">
+            <div class="menu">
+              <ul class="menu-list">
+                <li><a class="is-active" href="">Home</a></li>
+                <li><a href="">About LCBJ</a></li>
+                <li><a href="">Service Stories</a></li>
+                <li><a href="">Asha Deep Senior Citizen Home</a></li>
+                <li><a href="">Contributing</a></li>
+                <li><a href="">CSR</a></li>
+                <li><a href="">Office Bearers</a></li>
+                <li><a href="">Contact us</a></li>
+              </ul>
             </div>
           </div>
 
           <footer class="quickview-footer">
             <div class="buttons is-centered">
-              <a class="button is-primary" href="#">Join us</a>
-              <a class="button is-info has-text-black" href="#">Donate</a>
+              <a class="button is-small is-primary" href="#">Join us</a>
+              <a class="button is-small is-info has-text-black" href="#">
+                Donate
+              </a>
             </div>
           </footer>
         </div>
       </nav>
 
-      <main class="column is-three-fifths tablet-width">
+      <main class="column is-half is-three-fifths-desktop tablet-width">
         <article>
           <header class="title">
             <h2>Lions Club of Bangalore Jayanagar</h2>
@@ -172,7 +174,7 @@
         </article>
       </main>
 
-      <aside class="column is-one-fifth">
+      <aside class="column is-one-quarter is-one-fifth-desktop">
         <header class="title is-5">
           <h2>Lions Club International</h2>
           <hr>

@@ -29,10 +29,13 @@ hr {
 @import '../node_modules/bulma/sass/elements/container.sass';
 @import '../node_modules/bulma/sass/elements/content.sass';
 @import '../node_modules/bulma/sass/elements/image.sass';
+@import '../node_modules/bulma/sass/elements/other.sass';
 @import '../node_modules/bulma/sass/elements/title.sass';
 @import '../node_modules/bulma/sass/grid/columns.sass';
 @import '../node_modules/bulma/sass/layout/footer.sass';
 @import '../node_modules/bulma/sass/layout/section.sass';
+
+$quickview-shadow: none;
 @import '../node_modules/bulma-quickview/dist/css/bulma-quickview.sass';
 
 body {
@@ -49,6 +52,22 @@ article {
     padding: 0 24px;
   }
   margin: 20px 0;
+}
+
+nav {
+  @include tablet {
+    max-width: 240px;
+  }
+  .quickview {
+    @include tablet {
+      max-width: none;
+      position: static;
+      width: unset;
+    }
+  }
+  .quickview-footer {
+    justify-content: center;
+  }
 }
 
 .is-absolute {
