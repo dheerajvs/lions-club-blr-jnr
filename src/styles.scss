@@ -19,26 +19,26 @@ hr {
   width: 68px;
 }
 
-@import '../node_modules/bulma/sass/utilities/_all.sass';
-@import '../node_modules/bulma/sass/base/_all.sass';
-@import '../node_modules/bulma/sass/components/card.sass';
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/base/_all.sass';
+@import 'bulma/sass/components/card.sass';
 
 $menu-list-link-padding: 0.5em 1.75em;
-@import '../node_modules/bulma/sass/components/menu.sass';
-@import '../node_modules/bulma/sass/elements/box.sass';
-@import '../node_modules/bulma/sass/elements/button.sass';
-@import '../node_modules/bulma/sass/elements/container.sass';
-@import '../node_modules/bulma/sass/elements/content.sass';
-@import '../node_modules/bulma/sass/elements/image.sass';
-@import '../node_modules/bulma/sass/elements/other.sass';
-@import '../node_modules/bulma/sass/elements/title.sass';
-@import '../node_modules/bulma/sass/grid/columns.sass';
-@import '../node_modules/bulma/sass/layout/footer.sass';
-@import '../node_modules/bulma/sass/layout/section.sass';
+@import 'bulma/sass/components/menu.sass';
+@import 'bulma/sass/elements/box.sass';
+@import 'bulma/sass/elements/button.sass';
+@import 'bulma/sass/elements/container.sass';
+@import 'bulma/sass/elements/content.sass';
+@import 'bulma/sass/elements/image.sass';
+@import 'bulma/sass/elements/other.sass';
+@import 'bulma/sass/elements/title.sass';
+@import 'bulma/sass/grid/columns.sass';
+@import 'bulma/sass/layout/footer.sass';
+@import 'bulma/sass/layout/section.sass';
 
 $quickview-shadow: none;
-@import '../node_modules/bulma-quickview/dist/css/bulma-quickview.sass';
-@import '../node_modules/bulma-carousel/src/sass/index.sass';
+@import 'bulma-quickview/dist/css/bulma-quickview.sass';
+@import 'bulma-carousel/src/sass/index.sass';
 
 body {
   background-color: #f6f6f6f6;
@@ -56,6 +56,10 @@ nav {
     background-color: white;
     max-width: 240px;
     align-self: flex-start;
+  }
+  .hamburger {
+    left: 8px;
+    top: 16px;
   }
   .quickview {
     @include tablet {
