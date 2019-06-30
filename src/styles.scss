@@ -22,6 +22,8 @@ hr {
 @import '../node_modules/bulma/sass/utilities/_all.sass';
 @import '../node_modules/bulma/sass/base/_all.sass';
 @import '../node_modules/bulma/sass/components/card.sass';
+
+$menu-list-link-padding: 0.5em 1.75em;
 @import '../node_modules/bulma/sass/components/menu.sass';
 @import '../node_modules/bulma/sass/components/navbar.sass';
 @import '../node_modules/bulma/sass/elements/box.sass';
@@ -67,6 +69,15 @@ nav {
   }
   .quickview-footer {
     justify-content: center;
+  }
+}
+
+.lci {
+  @include tablet {
+    margin-top: 115px;
+  }
+  & .menu-label {
+    font-size: 0.75rem;
   }
 }
 
