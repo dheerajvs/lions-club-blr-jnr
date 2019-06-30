@@ -25,7 +25,6 @@ hr {
 
 $menu-list-link-padding: 0.5em 1.75em;
 @import '../node_modules/bulma/sass/components/menu.sass';
-@import '../node_modules/bulma/sass/components/navbar.sass';
 @import '../node_modules/bulma/sass/elements/box.sass';
 @import '../node_modules/bulma/sass/elements/button.sass';
 @import '../node_modules/bulma/sass/elements/container.sass';
@@ -45,20 +44,11 @@ body {
 }
 
 nav {
-  height: 52px;
-}
-
-article {
-  padding: 0 16px;
-  @include tablet {
-    padding: 0 24px;
-  }
-  margin: 20px 0;
-}
-
-nav {
   @include tablet {
     max-width: 240px;
+    align-self: flex-start;
+    position: sticky;
+    top: -$column-gap;
   }
   .quickview {
     @include tablet {
@@ -70,6 +60,14 @@ nav {
   .quickview-footer {
     justify-content: center;
   }
+}
+
+article {
+  padding: 0 16px;
+  @include tablet {
+    padding: 0 24px;
+  }
+  margin: 20px 0;
 }
 
 .lci {
