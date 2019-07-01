@@ -2,11 +2,13 @@
 
 $blue: #112e57;
 $yellow: #f9c910;
+$grey-dark: hsl(0, 0%, 29%);
+$white-ter: hsl(0, 0%, 96%);
 
 $primary: $blue;
 $info: $yellow;
-
-$section-padding: 1rem 0;
+$info-invert: black;
+$body-background-color: $white-ter;
 
 $hr-background-color: $info !default;
 $hr-height: 4px !default;
@@ -14,6 +16,8 @@ $hr-margin: 15px 0 0 0 !default;
 hr {
   width: 68px;
 }
+
+$section-padding: 1rem 0;
 
 @import 'bulma/sass/utilities/_all.sass';
 @import 'bulma/sass/base/_all.sass';
@@ -30,16 +34,15 @@ $menu-item-active-background-color: $info;
 @import 'bulma/sass/elements/image.sass';
 @import 'bulma/sass/elements/title.sass';
 @import 'bulma/sass/grid/columns.sass';
+$footer-background-color: $primary;
+$footer-color: white;
+$footer-padding: 4rem 1.5rem 4rem;
 @import 'bulma/sass/layout/footer.sass';
 @import 'bulma/sass/layout/section.sass';
 
 $quickview-shadow: none;
 @import 'bulma-quickview/dist/css/bulma-quickview.sass';
 @import 'bulma-carousel/src/sass/index.sass';
-
-body {
-  background-color: #f6f6f6f6;
-}
 
 nav {
   position: sticky;
@@ -116,6 +119,9 @@ section.slider-container {
   }
   & .menu-label {
     font-size: 0.75rem;
+  }
+  & .social-btns {
+    padding: $menu-list-link-padding;
   }
 }
 
