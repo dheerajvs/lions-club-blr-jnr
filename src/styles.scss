@@ -20,13 +20,14 @@ hr {
 @import 'bulma/sass/components/card.sass';
 
 $menu-list-link-padding: 0.5em 1.75em;
+$menu-item-active-color: black;
+$menu-item-active-background-color: $info;
 @import 'bulma/sass/components/menu.sass';
 @import 'bulma/sass/elements/box.sass';
 @import 'bulma/sass/elements/button.sass';
 @import 'bulma/sass/elements/container.sass';
 @import 'bulma/sass/elements/content.sass';
 @import 'bulma/sass/elements/image.sass';
-@import 'bulma/sass/elements/other.sass';
 @import 'bulma/sass/elements/title.sass';
 @import 'bulma/sass/grid/columns.sass';
 @import 'bulma/sass/layout/footer.sass';
@@ -54,10 +55,15 @@ nav {
     align-self: flex-start;
   }
   .hamburger {
-    left: 8px;
-    top: 16px;
+    left: 0;
+    top: 11px;
   }
   .quickview {
+    & .close-btn{
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
     @include tablet {
       max-width: none;
       position: static;
@@ -98,8 +104,15 @@ section.slider-container {
 }
 
 .lci {
+  @include mobile {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
   @include tablet {
     margin-top: 115px;
+    & .menu {
+      font-size: $size-small;
+    }
   }
   & .menu-label {
     font-size: 0.75rem;

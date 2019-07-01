@@ -22,25 +22,30 @@
       <nav class="column is-one-quarter is-one-fifth-desktop" role="navigation"
            aria-label="main navigation">
         <div class="columns is-centered is-mobile is-hidden-tablet">
-          <a class="hamburger button is-primary is-absolute" aria-label="menu"
-             aria-expanded="false" data-show="quickview"
-             data-target="quickviewDefault">
+          <button class="hamburger button is-medium is-primary is-absolute"
+                  aria-label="menu" aria-expanded="false" data-show="quickview"
+                  data-target="quickviewDefault">
             <span class="icon has-text-info">
               <i class="fas fa-bars"></i>
             </span>
-          </a>
+          </button>
           <a class="column is-narrow" href="/">
             <img src="/img/lci-logo.svg" alt="Logo" width="60">
           </a>
         </div>
 
         <div id="quickviewDefault" class="quickview is-left is-marginless">
-          <header class="quickview-header columns is-centered is-marginless">
+          <header
+                  class="quickview-header columns is-centered is-mobile is-marginless">
             <a class="column is-narrow" href="/">
               <img src="/img/lci-logo.svg" alt="Logo" width="60">
             </a>
-            <button class="delete is-medium is-hidden-tablet"
-                  data-dismiss="quickview"></button>
+            <button class="close-btn button is-large is-white is-hidden-tablet"
+                    data-dismiss="quickview">
+              <span class="icon has-text-primary">
+                <i class="fas fa-times"></i>
+              </span>
+            </button>
           </header>
 
           <div class="quickview-body">
@@ -84,7 +89,7 @@
                 Lions Club of Bangalore Jayanagar (LCBJ) district 317A was
                 chartered in
                 <time datetime="1982-08-28">1982</time>.
-                <a class="button is-small is-light" href="#">Read More…</a>
+                <a class="button is-small is-light" href="#">Learn More…</a>
               </p>
               <footer class="buttons is-centered">
                 <a class="button is-primary" href="#">Join us</a>
@@ -181,7 +186,7 @@
                 Office Bearers
               </p>
               <footer class="buttons is-centered">
-                <a class="button is-primary" href="#">Read More…</a>
+                <a class="button is-primary" href="#">See all…</a>
               </footer>
             </div>
           </section>
@@ -211,7 +216,7 @@
             <h2>Lions Club International</h2>
             <hr>
           </header>
-          <div class="menu is-small">
+          <div class="menu">
             <p class="menu-label">
               News
             </p>
@@ -249,6 +254,50 @@
               <li><a href="https://youtube.com/lionsclubs" target="_blank"
                    rel="noopener">Lions Videos</a></li>
             </ul>
+            <p class="menu-label">
+              Connect
+            </p>
+            <div class="buttons">
+              <a class="button has-text-grey" href="https://www.facebook.com/lionsclubs"
+                 target="_blank" rel="noopener" title="Facebook">
+                <span class="icon">
+                  <i class="fab fa-facebook-f"></i>
+                </span>
+              </a>
+              <a class="button has-text-grey" href="https://twitter.com/lionsclubs"
+                 target="_blank" rel="noopener" title="Twitter">
+                <span class="icon">
+                  <i class="fab fa-twitter"></i>
+                </span>
+              </a>
+              <a class="button has-text-grey" href="https://instagram.com/lionsclubs"
+                 target="_blank" rel="noopener" title="Instagram">
+                <span class="icon">
+                  <i class="fab fa-instagram"></i>
+                </span>
+              </a>
+              <a class="button has-text-grey"
+                 href="https://www.youtube.com/user/lionsclubsorg"
+                 target="_blank" rel="noopener" title="YouTube">
+                <span class="icon">
+                  <i class="fab fa-youtube"></i>
+                </span>
+              </a>
+              <a class="button has-text-grey"
+                 href="https://www.linkedin.com/company/lions-clubs-international/"
+                 target="_blank" rel="noopener" title="LinkedIn">
+                <span class="icon">
+                  <i class="fab fa-linkedin"></i>
+                </span>
+              </a>
+              <a class="button has-text-grey"
+                 href="https://www.flickr.com/photos/lionsclubsorg/"
+                 target="_blank" rel="noopener" title="Flickr">
+                <span class="icon">
+                  <i class="fab fa-flickr"></i>
+                </span>
+              </a>
+            </div>
           </div>
         </section>
       </aside>
