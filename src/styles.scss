@@ -62,7 +62,7 @@ nav {
     top: 11px;
   }
   .quickview {
-    & .close-btn{
+    & .close-btn {
       position: absolute;
       left: 0;
       top: 8px;
@@ -85,6 +85,7 @@ article {
   }
   margin: 20px 0;
 }
+
 section.slider-container {
   margin-bottom: 8px;
 }
@@ -104,6 +105,26 @@ section.slider-container {
 }
 .slider-pagination .slider-page {
   background: $info;
+}
+
+.bearers .table {
+  border-collapse: separate;
+  border-spacing: 0 1px;
+  margin-right: 8px;
+  & tr {
+    & td {
+      padding: 4px 8px;
+      color: black;
+    }
+    & td:first-child {
+      background-color: $info;
+      min-width: 9em;
+    }
+    & td:not(first-child) {
+      background-color: white;
+      min-width: 9.5em;
+    }
+  }
 }
 
 .lci {
