@@ -43,6 +43,10 @@ $quickview-shadow: none;
 @import 'bulma-quickview/dist/css/bulma-quickview.sass';
 @import 'bulma-carousel/src/sass/index.sass';
 
+abbr {
+  text-decoration: none;
+}
+
 nav.main-nav {
   position: sticky;
   top: -$column-gap;
