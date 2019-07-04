@@ -155,11 +155,15 @@ section.slider-container {
     color: $grey-light;
   }
   & .menu-list a {
-    color: $grey-lighter;
+    text-decoration: none;
     &:hover {
-      background-color: white;
+      background-color: $grey-lighter;
       color: black;
     }
+  }
+  & a {
+    color: $grey-lighter;
+    text-decoration: underline;
   }
 }
 
