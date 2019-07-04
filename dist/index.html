@@ -19,8 +19,8 @@
   <body>
     <div
          class="columns is-centered is-variable is-0-mobile is-2-tablet is-3-desktop">
-      <nav class="column is-one-quarter is-one-fifth-desktop" role="navigation"
-           aria-label="main navigation">
+      <nav class="main-nav column is-one-quarter is-one-fifth-desktop"
+           role="navigation" aria-label="main navigation">
         <div class="columns is-centered is-mobile is-hidden-tablet">
           <button class="hamburger button is-medium is-primary is-absolute"
                   aria-label="menu" aria-expanded="false" data-show="quickview"
@@ -65,8 +65,8 @@
 
           <footer class="quickview-footer">
             <div class="buttons is-centered">
-              <a class="button is-small is-primary" href="#">Join us</a>
-              <a class="button is-small is-info" href="#">
+              <a class="button is-primary" href="#">Join us</a>
+              <a class="button is-info" href="#">
                 Donate
               </a>
             </div>
@@ -245,7 +245,7 @@
                 Contribution
               </p>
               <footer class="buttons is-centered">
-                <a class="button is-primary" href="#">Read More…</a>
+                <a class="button is-primary" href="#">Learn More…</a>
               </footer>
             </div>
           </section>
@@ -348,12 +348,33 @@
       </aside>
     </div>
 
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p class="is-size-7">
-          Website developed by Dheeraj Vepakomma.
-        </p>
-      </div>
+    <footer class="main-footer footer">
+      <nav class="columns is-centered">
+        <div class="menu column is-narrow">
+          <p class="menu-label">
+            About
+          </p>
+          <ul class="menu-list">
+            <li><a>About LCBJ</a></li>
+            <li><a>Asha Deep Senior Citizen Home</a></li>
+            <li><a>Office Bearers</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="menu column is-narrow">
+          <p class="menu-label">
+            Contribute
+          </p>
+          <ul class="menu-list">
+            <li><a>Service Stories</a></li>
+            <li><a>Contributing</a></li>
+            <li><a>CSR</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="is-size-7 has-text-centered">
+        Website developed by Dheeraj Vepakomma.
+      </p>
     </footer>
   </body>
 
