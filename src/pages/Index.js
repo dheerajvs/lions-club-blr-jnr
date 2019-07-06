@@ -1,8 +1,8 @@
 import React from 'react';
 import Page from 'components/Page';
 
-const Index = () => (
-  <Page>
+const Index = locals => (
+  <Page path={locals.path}>
     <article>
       <header className="title">
         <h2>Lions Club of Bangalore Jayanagar</h2>
