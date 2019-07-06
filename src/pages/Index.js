@@ -14,9 +14,8 @@ const Index = () => (
             <img className="round-top" src="/img/club.jpg" alt="Club Photo" />
           </figure>
           <p className="p-4">
-            Lions Club of Bangalore Jayanagar (LCBJ) district 317A was chartered
-            in
-            <time dateTime="1982-08-28">1982</time>.
+            Lions Club of Bangalore Jayanagar (LCBJ) District 317A was chartered
+            in <time dateTime="1982-08-28">1982</time>.{' '}
             <a className="button is-small is-light" href="#">
               Learn More…
             </a>
@@ -117,7 +116,7 @@ const Index = () => (
             />
           </figure>
           <p className="p-4">
-            The <abbr title="Lions Club of Bangalore Jayanagar">LCBJ</abbr>
+            The <abbr title="Lions Club of Bangalore Jayanagar">LCBJ</abbr>{' '}
             Service Trust runs Asha Deep Senior Citizen Home, which is situated
             in Thathaguni, Kanakapura Road.
           </p>
