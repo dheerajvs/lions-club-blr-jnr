@@ -49,7 +49,7 @@ module.exports = {
       globals: {
         window: {},
       },
-      crawl: true,
+      paths: ['/', '/about/', '/stories/', '/asha-deep/'],
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
