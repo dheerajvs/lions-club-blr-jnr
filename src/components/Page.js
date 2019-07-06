@@ -3,42 +3,65 @@ import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
 
 const menu = [
-  {
-    href: '/',
-    title: 'Home',
-  },
-  {
-    href: '/about/',
-    title: (
-      <>
-        About <abbr title="Lions Club of Bangalore Jayanagar">LCBJ</abbr>
-      </>
-    ),
-  },
-  {
-    href: '/stories/',
-    title: 'Service Stories',
-  },
-  {
-    href: '/asha-deep/',
-    title: 'Asha Deep Senior Citizen Home',
-  },
-  {
-    href: '/contributing/',
-    title: 'Contributing',
-  },
-  {
-    href: '/csr/',
-    title: <abbr title="Corporate Social Responsibility">CSR</abbr>,
-  },
-  {
-    href: '/office-bearers/',
-    title: 'Office Bearers',
-  },
-  {
-    href: '/contact/',
-    title: 'Contact us',
-  },
+  ['/', 'Home'],
+  [
+    '/about/',
+    <>
+      About <abbr title="Lions Club of Bangalore Jayanagar">LCBJ</abbr>
+    </>,
+  ],
+  ['/stories/', 'Service Stories'],
+  ['/asha-deep/', 'Asha Deep Senior Citizen Home'],
+  ['/contributing/', 'Contributing'],
+  [
+    '/csr/',
+    <>
+      <abbr title="Corporate Social Responsibility">CSR</abbr>
+    </>,
+  ],
+  ['/office-bearers/', 'Office Bearers'],
+  ['/contact/', 'Contact us'],
+];
+
+const lciNews = [
+  [
+    'https://www.lionsclubs.org/en/resources-for-members/resource-center/global-action-team',
+    'Your Global Action Team',
+  ],
+  ['https://lcicon.lionsclubs.org/', 'Attend LCICon in Milan'],
+  ['https://www.lionsclubs.org/en/donate', 'Donate to Campaign 100'],
+  ['https://www.lionsclubs.org/en/footer/lion-magazine', 'Read LION Magazine'],
+  [
+    'https://www.lionsclubs.org/en/explore-our-clubs/our-global-causes',
+    'Explore Our Global Causes',
+  ],
+  [
+    'https://www.lionsclubs.org/en/discover-our-clubs/our-leaders',
+    'Meet Our Leaders',
+  ],
+];
+
+const resources = [
+  ['https://www.lionsclubs.org/', 'Lions Clubs International'],
+  ['https://www.lionsclubs.org/en/discover-our-foundation/mission', 'LCIF'],
+  [
+    'https://www.lionsclubs.org/en/resources-for-members/resource-center',
+    'Resource Center',
+  ],
+  ['https://youtube.com/lionsclubs', 'Lions Videos'],
+];
+
+const connect = [
+  ['https://www.facebook.com/lionsclubs', 'Facebook', 'fa-facebook-f'],
+  ['https://twitter.com/lionsclubs', 'Twitter', 'fa-twitter'],
+  ['https://instagram.com/lionsclubs', 'Instagram', 'fa-instagram'],
+  ['https://www.youtube.com/user/lionsclubsorg', 'YouTube', 'fa-youtube'],
+  [
+    'https://www.linkedin.com/company/lions-clubs-international/',
+    'LinkedIn',
+    'fa-linkedin',
+  ],
+  ['https://www.flickr.com/photos/lionsclubsorg/', 'Flickr', 'fa-flickr'],
 ];
 
 const Page = props => {
@@ -95,15 +118,15 @@ const Page = props => {
             <div className="quickview-body">
               <div className="menu">
                 <ul className="menu-list">
-                  {menu.map(item => (
-                    <li key={item.href}>
+                  {menu.map(([href, title]) => (
+                    <li key={href}>
                       <a
                         className={classnames({
-                          'is-active': path === item.href,
+                          'is-active': path === href,
                         })}
-                        href={item.href}
+                        href={href}
                       >
-                        {item.title}
+                        {title}
                       </a>
                     </li>
                   ))}
@@ -137,168 +160,40 @@ const Page = props => {
             <div className="menu">
               <p className="menu-label">News</p>
               <ul className="menu-list">
-                <li>
-                  <a
-                    href="https://www.lionsclubs.org/en/resources-for-members/resource-center/global-action-team"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Your Global Action Team
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://lcicon.lionsclubs.org/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Attend LCICon in Milan
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.lionsclubs.org/en/donate"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Donate to Campaign 100
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.lionsclubs.org/en/footer/lion-magazine"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Read LION Magazine
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.lionsclubs.org/en/explore-our-clubs/our-global-causes"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Explore Our Global Causes
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.lionsclubs.org/en/discover-our-clubs/our-leaders"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Meet Our Leaders
-                  </a>
-                </li>
+                {lciNews.map(([href, title]) => (
+                  <li key={href}>
+                    <a href={href} target="_blank" rel="noopener">
+                      {title}
+                    </a>
+                  </li>
+                ))}
               </ul>
               <p className="menu-label">Resources</p>
               <ul className="menu-list">
-                <li>
-                  <a
-                    href="https://www.lionsclubs.org/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Lions Clubs International
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.lionsclubs.org/en/discover-our-foundation/mission"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    LCIF
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.lionsclubs.org/en/resources-for-members/resource-center"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Resource Center
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://youtube.com/lionsclubs"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Lions Videos
-                  </a>
-                </li>
+                {resources.map(([href, title]) => (
+                  <li key={href}>
+                    <a href={href} target="_blank" rel="noopener">
+                      {title}
+                    </a>
+                  </li>
+                ))}
               </ul>
               <p className="menu-label">Connect</p>
               <div className="social-btns buttons">
-                <a
-                  className="button has-text-grey"
-                  href="https://www.facebook.com/lionsclubs"
-                  target="_blank"
-                  rel="noopener"
-                  title="Facebook"
-                >
-                  <span className="icon">
-                    <i className="fab fa-facebook-f" />
-                  </span>
-                </a>
-                <a
-                  className="button has-text-grey"
-                  href="https://twitter.com/lionsclubs"
-                  target="_blank"
-                  rel="noopener"
-                  title="Twitter"
-                >
-                  <span className="icon">
-                    <i className="fab fa-twitter" />
-                  </span>
-                </a>
-                <a
-                  className="button has-text-grey"
-                  href="https://instagram.com/lionsclubs"
-                  target="_blank"
-                  rel="noopener"
-                  title="Instagram"
-                >
-                  <span className="icon">
-                    <i className="fab fa-instagram" />
-                  </span>
-                </a>
-                <a
-                  className="button has-text-grey"
-                  href="https://www.youtube.com/user/lionsclubsorg"
-                  target="_blank"
-                  rel="noopener"
-                  title="YouTube"
-                >
-                  <span className="icon">
-                    <i className="fab fa-youtube" />
-                  </span>
-                </a>
-                <a
-                  className="button has-text-grey"
-                  href="https://www.linkedin.com/company/lions-clubs-international/"
-                  target="_blank"
-                  rel="noopener"
-                  title="LinkedIn"
-                >
-                  <span className="icon">
-                    <i className="fab fa-linkedin" />
-                  </span>
-                </a>
-                <a
-                  className="button has-text-grey"
-                  href="https://www.flickr.com/photos/lionsclubsorg/"
-                  target="_blank"
-                  rel="noopener"
-                  title="Flickr"
-                >
-                  <span className="icon">
-                    <i className="fab fa-flickr" />
-                  </span>
-                </a>
+                {connect.map(([href, title, icon]) => (
+                  <a
+                    key={href}
+                    className="button has-text-grey"
+                    href={href}
+                    target="_blank"
+                    rel="noopener"
+                    title={title}
+                  >
+                    <span className="icon">
+                      <i className={classnames('fab', icon)} />
+                    </span>
+                  </a>
+                ))}
               </div>
             </div>
           </section>
