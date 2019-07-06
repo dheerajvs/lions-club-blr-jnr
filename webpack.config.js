@@ -5,12 +5,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: {
     build: './src/build.js',
-    index: './src/index.js'
+    index: './src/index.js',
   },
   output: {
     filename: 'js/[name].js',
-    path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
+  },
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      pages: path.resolve(__dirname, 'src/pages/'),
+    },
   },
   module: {
     rules: [
@@ -40,10 +45,11 @@ module.exports = {
   },
   plugins: [
     new StaticSiteGeneratorPlugin({
+      entry: 'build',
       globals: {
         window: {},
       },
-      // crawl: true
+      crawl: true,
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',

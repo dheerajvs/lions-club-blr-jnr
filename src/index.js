@@ -1,7 +1,6 @@
-require('./styles.scss');
-
-const bulmaCarousel = require('../node_modules/bulma-carousel/dist/js/bulma-carousel');
-const bulmaQuickview = require('../node_modules/bulma-quickview/dist/js/bulma-quickview');
+import './styles.scss';
+import bulmaCarousel from 'bulma-carousel/dist/js/bulma-carousel';
+import bulmaQuickview from 'bulma-quickview/dist/js/bulma-quickview';
 
 bulmaCarousel.attach('.slider-container', {
   slidesToShow: 3,

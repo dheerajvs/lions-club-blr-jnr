@@ -1,8 +1,13 @@
 import React from 'react';
-import Html from './Html';
+import { Helmet } from 'react-helmet';
 
 const Page = props => (
-  <Html>
+  <>
+    <Helmet
+      defaultTitle="Lions Club of Bangalore Jayanagar"
+      titleTemplate="%s | Lions Club of Bangalore Jayanagar"
+    />
+
     <div className="columns is-centered is-variable is-0-mobile is-2-tablet is-3-desktop">
       <nav
         className="main-nav column is-one-quarter is-one-fifth-desktop"
@@ -45,21 +50,21 @@ const Page = props => (
             <div className="menu">
               <ul className="menu-list">
                 <li>
-                  <a className="is-active" href="">
+                  <a className="is-active" href="/">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="/about/">
                     About{' '}
                     <abbr title="Lions Club of Bangalore Jayanagar">LCBJ</abbr>
                   </a>
                 </li>
                 <li>
-                  <a href="">Service Stories</a>
+                  <a href="/stories/">Service Stories</a>
                 </li>
                 <li>
-                  <a href="">Asha Deep Senior Citizen Home</a>
+                  <a href="/asha-deep/">Asha Deep Senior Citizen Home</a>
                 </li>
                 <li>
                   <a href="">Contributing</a>
@@ -313,7 +318,7 @@ const Page = props => (
         </div>
       </nav>
       <p className="is-size-7 has-text-centered">
-        Website developed by&nbsp;
+        Website developed by{' '}
         <a
           href="https://github.com/dheerajvs/lions-club-blr-jnr"
           target="_blank"
@@ -323,7 +328,7 @@ const Page = props => (
         </a>
       </p>
     </footer>
-  </Html>
+  </>
 );
 
 export default Page;

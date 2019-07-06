@@ -19,6 +19,12 @@
     "url": "https://github.com/dheerajvs/lions-club-blr-jnr/issues"
   },
   "homepage": "https://github.com/dheerajvs/lions-club-blr-jnr#readme",
+  "browserslist": [
+    "> 0.5% in IN",
+    "last 1 and_ff version",
+    "last 1 edge version",
+    "last 1 safari version"
+  ],
   "devDependencies": {
     "@babel/core": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
