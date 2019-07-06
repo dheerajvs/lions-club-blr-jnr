@@ -1,3 +1,4 @@
-dist/css/main.bundle.css
-dist/js/bundle.js
+dist/css/
+dist/js/
+dist/**/*.html
 node_modules/
