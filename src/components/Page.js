@@ -313,7 +313,7 @@ const Page = props => (
         </div>
       </nav>
       <p className="is-size-7 has-text-centered">
-        Website developed by
+        Website developed by&nbsp;
         <a
           href="https://github.com/dheerajvs/lions-club-blr-jnr"
           target="_blank"

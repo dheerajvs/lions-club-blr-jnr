@@ -3,9 +3,12 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/build.js',
+  entry: {
+    build: './src/build.js',
+    index: './src/index.js'
+  },
   output: {
-    filename: 'js/bundle.js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
   },
@@ -43,7 +46,7 @@ module.exports = {
       // crawl: true
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].bundle.css',
+      filename: 'css/[name].css',
     }),
   ],
 };

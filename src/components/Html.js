@@ -11,8 +11,8 @@ const Html = props => (
       <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
       <link rel="apple-touch-icon" href="favicon.png" />
       <link rel="manifest" href="manifest.json" />
-      <link rel="stylesheet" href="css/main.bundle.css" />
-      <script defer src="js/bundle.js" />
+      <link rel="stylesheet" href="css/index.css" />
+      <script defer src="js/index.js" />
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
