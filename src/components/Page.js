@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
+import Link from 'components/Link';
 
 const menu = [
   ['/', 'Home'],
@@ -92,9 +93,9 @@ const Page = props => {
                 <i className="fas fa-bars" />
               </span>
             </button>
-            <a className="column is-narrow" href="/">
+            <Link className="column is-narrow" href="/">
               <img src="/img/lci-logo.svg" alt="Logo" width="60" />
-            </a>
+            </Link>
           </div>
 
           <div
@@ -102,9 +103,9 @@ const Page = props => {
             className="quickview is-left is-marginless"
           >
             <header className="quickview-header columns is-centered is-mobile is-marginless">
-              <a className="column is-narrow" href="/">
+              <Link className="column is-narrow" href="/">
                 <img src="/img/lci-logo.svg" alt="Logo" width="60" />
-              </a>
+              </Link>
               <button
                 className="close-btn button is-large is-white is-hidden-tablet"
                 data-dismiss="quickview"
@@ -120,14 +121,14 @@ const Page = props => {
                 <ul className="menu-list">
                   {menu.map(([href, title]) => (
                     <li key={href}>
-                      <a
+                      <Link
                         className={classnames({
                           'is-active': path === href,
                         })}
                         href={href}
                       >
                         {title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -136,12 +137,12 @@ const Page = props => {
 
             <footer className="quickview-footer">
               <div className="buttons is-centered">
-                <a className="button is-primary" href="#">
+                <Link className="button is-primary" href="#">
                   Join us
-                </a>
-                <a className="button is-info" href="#">
+                </Link>
+                <Link className="button is-info" href="#">
                   Donate
-                </a>
+                </Link>
               </div>
             </footer>
           </div>
@@ -162,9 +163,7 @@ const Page = props => {
               <ul className="menu-list">
                 {lciNews.map(([href, title]) => (
                   <li key={href}>
-                    <a href={href} target="_blank" rel="noopener">
-                      {title}
-                    </a>
+                    <Link href={href}>{title}</Link>
                   </li>
                 ))}
               </ul>
@@ -172,27 +171,23 @@ const Page = props => {
               <ul className="menu-list">
                 {resources.map(([href, title]) => (
                   <li key={href}>
-                    <a href={href} target="_blank" rel="noopener">
-                      {title}
-                    </a>
+                    <Link href={href}>{title}</Link>
                   </li>
                 ))}
               </ul>
               <p className="menu-label">Connect</p>
               <div className="social-btns buttons">
                 {connect.map(([href, title, icon]) => (
-                  <a
+                  <Link
                     key={href}
                     className="button has-text-grey"
                     href={href}
-                    target="_blank"
-                    rel="noopener"
                     title={title}
                   >
                     <span className="icon">
                       <i className={classnames('fab', icon)} />
                     </span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -241,13 +236,9 @@ const Page = props => {
         </nav>
         <p className="is-size-7 has-text-centered">
           Website developed by{' '}
-          <a
-            href="https://github.com/dheerajvs/lions-club-blr-jnr"
-            target="_blank"
-            rel="noopener"
-          >
+          <Link href="https://github.com/dheerajvs/lions-club-blr-jnr">
             Dheeraj Vepakomma
-          </a>
+          </Link>
         </p>
       </footer>
     </>

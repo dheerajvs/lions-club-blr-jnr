@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from 'components/Page';
+import Link from 'components/Link';
 
 const Index = locals => (
   <Page path={locals.path}>
@@ -16,17 +17,17 @@ const Index = locals => (
           <p className="p-4">
             Lions Club of Bangalore Jayanagar (LCBJ) District 317A was chartered
             in <time dateTime="1982-08-28">1982</time>.{' '}
-            <a className="button is-small is-light" href="#">
+            <Link className="button is-small is-light" href="#">
               Learn More…
-            </a>
+            </Link>
           </p>
           <footer className="buttons is-centered">
-            <a className="button is-primary" href="#">
+            <Link className="button is-primary" href="#">
               Join us
-            </a>
-            <a className="button is-info" href="#">
+            </Link>
+            <Link className="button is-info" href="#">
               Donate
-            </a>
+            </Link>
           </footer>
         </div>
       </section>
@@ -51,9 +52,9 @@ const Index = locals => (
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <footer className="buttons is-centered">
-            <a className="button is-info" href="#">
+            <Link className="button is-info" href="#">
               Read More…
-            </a>
+            </Link>
           </footer>
         </div>
         <div className="slider box px-0 pt-0">
@@ -69,9 +70,9 @@ const Index = locals => (
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <footer className="buttons is-centered">
-            <a className="button is-info" href="#">
+            <Link className="button is-info" href="#">
               Read More…
-            </a>
+            </Link>
           </footer>
         </div>
         <div className="slider box px-0 pt-0">
@@ -87,17 +88,17 @@ const Index = locals => (
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <footer className="buttons is-centered">
-            <a className="button is-info" href="#">
+            <Link className="button is-info" href="#">
               Read More…
-            </a>
+            </Link>
           </footer>
         </div>
       </section>
 
       <footer className="buttons is-centered">
-        <a className="button is-primary is-inverted is-outlined" href="#">
+        <Link className="button is-primary is-inverted is-outlined" href="#">
           Read More Stories
-        </a>
+        </Link>
       </footer>
     </article>
 
@@ -121,9 +122,9 @@ const Index = locals => (
             in Thathaguni, Kanakapura Road.
           </p>
           <footer className="buttons is-centered">
-            <a className="button is-primary" href="#">
+            <Link className="button is-primary" href="#">
               Read More…
-            </a>
+            </Link>
           </footer>
         </div>
       </section>
@@ -181,9 +182,9 @@ const Index = locals => (
         </div>
       </section>
       <footer className="buttons is-centered">
-        <a className="button is-primary is-inverted is-outlined" href="#">
+        <Link className="button is-primary is-inverted is-outlined" href="#">
           See all…
-        </a>
+        </Link>
       </footer>
     </article>
 
@@ -199,9 +200,9 @@ const Index = locals => (
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <footer className="buttons is-centered">
-            <a className="button is-primary" href="#">
+            <Link className="button is-primary" href="#">
               Learn More…
-            </a>
+            </Link>
           </footer>
         </div>
       </section>
