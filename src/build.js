@@ -1,10 +1,9 @@
-import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Index from './pages/Index';
 
+const routes = {
+  '/': Index,
+};
+
 export default locals =>
-  renderToStaticMarkup(
-    <div>
-      <Index />
-    </div>
-  );
+  '<!doctype html>' + renderToStaticMarkup(routes[locals.path](locals));
