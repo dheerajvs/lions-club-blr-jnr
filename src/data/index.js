@@ -4,3 +4,4 @@ export { default as footerMenu } from './footer-menu.json';
 export { default as news } from './news.json';
 export { default as resources } from './resources.json';
 export { default as connect } from './connect.json';
+export { default as officeBearers } from './office-bearers.json';
