@@ -1,8 +1,8 @@
 import React from 'react';
 import Page from 'components/Page';
 
-const AshaDeep = locals => (
-  <Page path={locals.path}>
+const AshaDeep = props => (
+  <Page {...props}>
   </Page>
 );
 

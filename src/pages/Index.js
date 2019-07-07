@@ -2,8 +2,8 @@ import React from 'react';
 import Page from 'components/Page';
 import Link from 'components/Link';
 
-const Index = locals => (
-  <Page path={locals.path}>
+const Index = props => (
+  <Page {...props}>
     <article>
       <header className="title">
         <h2>Lions Club of Bangalore Jayanagar</h2>

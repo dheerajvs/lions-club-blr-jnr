@@ -1,0 +1,12 @@
+[
+  ["https://www.facebook.com/lionsclubs", "Facebook", "fa-facebook-f"],
+  ["https://twitter.com/lionsclubs", "Twitter", "fa-twitter"],
+  ["https://instagram.com/lionsclubs", "Instagram", "fa-instagram"],
+  ["https://www.youtube.com/user/lionsclubsorg", "YouTube", "fa-youtube"],
+  [
+    "https://www.linkedin.com/company/lions-clubs-international/",
+    "LinkedIn",
+    "fa-linkedin"
+  ],
+  ["https://www.flickr.com/photos/lionsclubsorg/", "Flickr", "fa-flickr"]
+]

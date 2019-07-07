@@ -3,70 +3,9 @@ import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
 import Link from 'components/Link';
 
-const menu = [
-  ['/', 'Home'],
-  [
-    '/about/',
-    <>
-      About <abbr title="Lions Club of Bangalore Jayanagar">LCBJ</abbr>
-    </>,
-  ],
-  ['/stories/', 'Service Stories'],
-  ['/asha-deep/', 'Asha Deep Senior Citizen Home'],
-  ['/contributing/', 'Contributing'],
-  [
-    '/csr/',
-    <>
-      <abbr title="Corporate Social Responsibility">CSR</abbr>
-    </>,
-  ],
-  ['/office-bearers/', 'Office Bearers'],
-  ['/contact/', 'Contact us'],
-];
-
-const lciNews = [
-  [
-    'https://www.lionsclubs.org/en/resources-for-members/resource-center/global-action-team',
-    'Your Global Action Team',
-  ],
-  ['https://lcicon.lionsclubs.org/', 'Attend LCICon in Milan'],
-  ['https://www.lionsclubs.org/en/donate', 'Donate to Campaign 100'],
-  ['https://www.lionsclubs.org/en/footer/lion-magazine', 'Read LION Magazine'],
-  [
-    'https://www.lionsclubs.org/en/explore-our-clubs/our-global-causes',
-    'Explore Our Global Causes',
-  ],
-  [
-    'https://www.lionsclubs.org/en/discover-our-clubs/our-leaders',
-    'Meet Our Leaders',
-  ],
-];
-
-const resources = [
-  ['https://www.lionsclubs.org/', 'Lions Clubs International'],
-  ['https://www.lionsclubs.org/en/discover-our-foundation/mission', 'LCIF'],
-  [
-    'https://www.lionsclubs.org/en/resources-for-members/resource-center',
-    'Resource Center',
-  ],
-  ['https://youtube.com/lionsclubs', 'Lions Videos'],
-];
-
-const connect = [
-  ['https://www.facebook.com/lionsclubs', 'Facebook', 'fa-facebook-f'],
-  ['https://twitter.com/lionsclubs', 'Twitter', 'fa-twitter'],
-  ['https://instagram.com/lionsclubs', 'Instagram', 'fa-instagram'],
-  ['https://www.youtube.com/user/lionsclubsorg', 'YouTube', 'fa-youtube'],
-  [
-    'https://www.linkedin.com/company/lions-clubs-international/',
-    'LinkedIn',
-    'fa-linkedin',
-  ],
-  ['https://www.flickr.com/photos/lionsclubsorg/', 'Flickr', 'fa-flickr'],
-];
-
 const Page = props => {
-  const { path, children } = props;
+  const { data, path, children } = props;
+  const { links, navMenu, footerMenu, news, resources, connect } = data;
 
   return (
     <>
@@ -119,7 +58,7 @@ const Page = props => {
             <div className="quickview-body">
               <div className="menu">
                 <ul className="menu-list">
-                  {menu.map(([href, title]) => (
+                  {navMenu.map(href => (
                     <li key={href}>
                       <Link
                         className={classnames({
@@ -127,7 +66,7 @@ const Page = props => {
                         })}
                         href={href}
                       >
-                        {title}
+                        {links[href]}
                       </Link>
                     </li>
                   ))}
@@ -161,17 +100,17 @@ const Page = props => {
             <div className="menu">
               <p className="menu-label">News</p>
               <ul className="menu-list">
-                {lciNews.map(([href, title]) => (
+                {news.map(href => (
                   <li key={href}>
-                    <Link href={href}>{title}</Link>
+                    <Link href={href}>{links[href]}</Link>
                   </li>
                 ))}
               </ul>
               <p className="menu-label">Resources</p>
               <ul className="menu-list">
-                {resources.map(([href, title]) => (
+                {resources.map(href => (
                   <li key={href}>
-                    <Link href={href}>{title}</Link>
+                    <Link href={href}>{links[href]}</Link>
                   </li>
                 ))}
               </ul>
@@ -197,42 +136,18 @@ const Page = props => {
 
       <footer className="main-footer footer">
         <nav className="columns is-centered">
-          <div className="menu column is-narrow">
-            <p className="menu-label">About</p>
-            <ul className="menu-list">
-              <li>
-                <a>
-                  About{' '}
-                  <abbr title="Lions Club of Bangalore Jayanagar">LCBJ</abbr>
-                </a>
-              </li>
-              <li>
-                <a>Asha Deep Senior Citizen Home</a>
-              </li>
-              <li>
-                <a>Office Bearers</a>
-              </li>
-              <li>
-                <a>Contact us</a>
-              </li>
-            </ul>
-          </div>
-          <div className="menu column is-narrow">
-            <p className="menu-label">Contribute</p>
-            <ul className="menu-list">
-              <li>
-                <a>Service Stories</a>
-              </li>
-              <li>
-                <a>Contributing</a>
-              </li>
-              <li>
-                <a>
-                  <abbr title="Corporate Social Responsibility">CSR</abbr>
-                </a>
-              </li>
-            </ul>
-          </div>
+          {footerMenu.map(({ title, items }) => (
+            <div key={title} className="menu column is-narrow">
+              <p className="menu-label">About</p>
+              <ul className="menu-list">
+                {items.map(href => (
+                  <li key={href}>
+                    <a href={href}>{links[href]}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </nav>
         <p className="is-size-7 has-text-centered">
           Website developed by{' '}

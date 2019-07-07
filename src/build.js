@@ -6,6 +6,7 @@ import Index from 'pages/Index';
 import About from 'pages/About';
 import Stories from 'pages/Stories';
 import AshaDeep from 'pages/AshaDeep';
+import * as data from './data';
 
 const routes = {
   '/': Index,
@@ -15,10 +16,12 @@ const routes = {
 };
 
 export default locals => {
+  locals.data = data;
   const body = renderToStaticMarkup(routes[locals.path](locals));
   const helmet = Helmet.renderStatic();
-  return (
+  const html =
     '<!doctype html>' +
-    renderToStaticMarkup(<Html helmet={helmet} body={body} />)
-  );
+    renderToStaticMarkup(<Html helmet={helmet} body={body} />);
+  Helmet.renderStatic(); // just to avoid memory leaks
+  return html;
 };

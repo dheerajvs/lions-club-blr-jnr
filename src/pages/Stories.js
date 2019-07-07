@@ -1,8 +1,8 @@
 import React from 'react';
 import Page from 'components/Page';
 
-const Stories = locals => (
-  <Page path={locals.path}>
+const Stories = props => (
+  <Page {...props}>
   </Page>
 );
 
