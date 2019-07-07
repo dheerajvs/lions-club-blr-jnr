@@ -155,11 +155,14 @@ section.slider-container {
 }
 
 .main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   & .menu-label {
     color: $grey-light;
   }
   & .menu-list a {
-    text-decoration: none;
     &:hover {
       background-color: $grey-lighter;
       color: black;
@@ -167,6 +170,11 @@ section.slider-container {
   }
   & a {
     color: $grey-lighter;
+  }
+  & .lci-footer {
+    max-width: 400px;
+  }
+  & .author {
     text-decoration: underline;
   }
 }

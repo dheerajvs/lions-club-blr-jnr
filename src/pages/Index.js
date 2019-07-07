@@ -22,12 +22,12 @@ const Index = props => {
             </figure>
             <p className="p-4">
               Lions Club of Bangalore Jayanagar (LCBJ) District 317A was
-              chartered in <time dateTime="1982-08-28">1982</time>.{' '}
-              <Link className="button is-small is-light" href="#">
-                Learn More…
-              </Link>
+              chartered in <time dateTime="1982-08-28">1982</time>.
             </p>
             <footer className="buttons is-centered">
+              <Link className="button is-outlined" href="/about/">
+                Learn More…
+              </Link>
               <Link className="button is-primary" href="#">
                 Join us
               </Link>

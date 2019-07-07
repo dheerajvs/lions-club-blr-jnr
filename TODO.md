@@ -1,15 +1,6 @@
 # Design
-- Navigation
-- About
 - Upcoming Events
-- Stories
-- Donation Info
 - Donors list
-- Asha Deep Senior Citizen Home
-- LCI links & news
-- Office bearers
-  - Past leaders
-- Contact
 
 # Features
 -[ ] Static site generation

@@ -94,7 +94,7 @@ const Page = props => {
         <aside className="lci column is-one-quarter is-one-fifth-desktop">
           <section className="box">
             <header className="title is-5">
-              <h2>Lions Club International</h2>
+              <h2>Lions Clubs International</h2>
               <hr />
             </header>
             <div className="menu">
@@ -138,20 +138,34 @@ const Page = props => {
         <nav className="columns is-centered">
           {footerMenu.map(({ title, items }) => (
             <div key={title} className="menu column is-narrow">
-              <p className="menu-label">About</p>
+              <p className="menu-label has-text-info has-text-weight-bold">
+                {title}
+              </p>
               <ul className="menu-list">
                 {items.map(href => (
                   <li key={href}>
-                    <a href={href}>{links[href]}</a>
+                    <Link href={href}>{links[href]}</Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+          <div className="lci-footer column">
+            <img className="has-text-centered" src="/img/LCI_primary_sig_white.png" alt="Logo" width="200" />
+            <p className="is-size-7">
+              Lions Clubs International is the largest service club organization
+              in the world. Our 1.42 million members in more than 47,000 clubs
+              are serving in over 200 countries and geographic areas around the
+              globe.
+            </p>
+          </div>
         </nav>
         <p className="is-size-7 has-text-centered">
           Website developed by{' '}
-          <Link href="https://github.com/dheerajvs/lions-club-blr-jnr">
+          <Link
+            class="author"
+            href="https://github.com/dheerajvs/lions-club-blr-jnr"
+          >
             Dheeraj Vepakomma
           </Link>
         </p>

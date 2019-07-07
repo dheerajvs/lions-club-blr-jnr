@@ -1,10 +1,10 @@
 [
-  { "title": "President", "officer": "Manjunath K S" },
-  { "title": "\u2160 Vice President", "officer": "Vijayakumar A" },
-  { "title": "\u2161 Vice President", "officer": "Mallikarjun H R" },
+  { "title": "President", "officer": "Manjunath K. S." },
+  { "title": "\u2160 Vice President", "officer": "Vijayakumar A." },
+  { "title": "\u2161 Vice President", "officer": "Mallikarjun H. R." },
   { "title": "\u2162 Vice President", "officer": "Gundappa Ramesh" },
-  { "title": "Secretary", "officer": "C S Raghavan" },
-  { "title": "Joint Secretary", "officer": "H R Keshava" },
-  { "title": "Treasurer", "officer": "Mallikarjun H R" },
-  { "title": "Administrator", "officer": "Sowmya B A" }
+  { "title": "Secretary", "officer": "C. S. Raghavan" },
+  { "title": "Joint Secretary", "officer": "H. R. Keshava" },
+  { "title": "Treasurer", "officer": "Mallikarjun H. R." },
+  { "title": "Administrator", "officer": "Sowmya B. A." }
 ]
