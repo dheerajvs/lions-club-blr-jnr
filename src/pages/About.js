@@ -7,6 +7,10 @@ import { Mjf, Pmjf } from 'components/Suffixes';
 const About = props => (
   <Page {...props}>
     <Helmet>
+      <meta
+        name="description"
+        content="About Lions Club of Bangalore Jayanagar"
+      />
       <title>About</title>
     </Helmet>
     <article>

@@ -151,7 +151,12 @@ const Page = props => {
             </div>
           ))}
           <div className="lci-footer column">
-            <img className="has-text-centered" src="/img/LCI_primary_sig_white.png" alt="Logo" width="200" />
+            <img
+              className="has-text-centered"
+              src="/img/LCI_primary_sig_white.png"
+              alt="Logo"
+              width="200"
+            />
             <p className="is-size-7">
               Lions Clubs International is the largest service club organization
               in the world. Our 1.42 million members in more than 47,000 clubs
