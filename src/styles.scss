@@ -60,12 +60,15 @@ nav.main-nav {
     max-width: 240px;
     align-self: flex-start;
   }
+  .mobile-nav {
+    justify-content: center;
+  }
   .hamburger {
     left: 0;
     top: 11px;
   }
   .quickview {
-    & .close-btn {
+    .close-btn {
       position: absolute;
       left: 8px;
       top: 16px;
@@ -119,16 +122,16 @@ section.slider-container {
   border-collapse: separate;
   border-spacing: 0 1px;
   margin-right: 8px;
-  & tr {
-    & td {
+  tr {
+    td {
       padding: 4px 8px;
       color: black;
     }
-    & td:first-child {
+    td:first-child {
       background-color: $info;
       min-width: 9em;
     }
-    & td:not(first-child) {
+    td:not(first-child) {
       background-color: white;
       min-width: 9.5em;
     }
@@ -142,14 +145,14 @@ section.slider-container {
   }
   @include tablet {
     margin-top: 115px;
-    & .menu {
+    .menu {
       font-size: $size-small;
     }
   }
-  & .menu-label {
+  .menu-label {
     font-size: 0.75rem;
   }
-  & .social-btns {
+  .social-btns {
     padding: $menu-list-link-padding;
   }
 }
@@ -159,22 +162,22 @@ section.slider-container {
   flex-direction: column;
   align-items: center;
 
-  & .menu-label {
+  .menu-label {
     color: $grey-light;
   }
-  & .menu-list a {
+  .menu-list a {
     &:hover {
       background-color: $grey-lighter;
       color: black;
     }
   }
-  & a {
+  a {
     color: $grey-lighter;
   }
-  & .lci-footer {
+  .lci-footer {
     max-width: 400px;
   }
-  & .author {
+  .author {
     text-decoration: underline;
   }
 }

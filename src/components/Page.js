@@ -20,7 +20,7 @@ const Page = props => {
           role="navigation"
           aria-label="main navigation"
         >
-          <div className="columns is-centered is-mobile is-hidden-tablet">
+          <div className="mobile-nav is-flex is-hidden-tablet">
             <button
               className="hamburger button is-medium is-primary is-absolute"
               aria-label="menu"
@@ -32,7 +32,7 @@ const Page = props => {
                 <i className="fas fa-bars" />
               </span>
             </button>
-            <Link className="column is-narrow" href="/">
+            <Link href="/">
               <img src="/img/lci-logo.svg" alt="Logo" width="60" />
             </Link>
           </div>

@@ -40,6 +40,10 @@ const About = props => (
             Chandra layout, Jyana yoga, Machohalli, Leo Club of Bangalore J. P.
             Nagar.
           </p>
+          <p className="p-4">
+            <strong>Lions Club of Bangalore Jayanagar Service Trust</strong> was
+            established in the year 1993 with a view to run permanent projects.
+          </p>
           <footer className="buttons is-centered">
             <Link className="button is-primary" href="#">
               Join us
