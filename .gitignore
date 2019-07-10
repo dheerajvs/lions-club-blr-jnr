@@ -1,4 +1,2 @@
-dist/css/
-dist/js/
-dist/**/*.html
+dist/
 node_modules/

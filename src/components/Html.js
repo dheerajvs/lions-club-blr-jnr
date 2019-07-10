@@ -14,13 +14,9 @@ const Html = ({ helmet, body }) => (
       <link rel="icon" type="image/png" sizes="192x192" href="img/icon-192x192.png" />
       <link rel="apple-touch-icon" href="img/icon-192x192.png" />
       <link rel="manifest" href="manifest.json" />
-      <link rel="stylesheet" href="css/index.css" />
+      <link rel="stylesheet" href="index.css" />
       <link rel="author" href="humans.txt" />
-      <script defer src="js/index.js" />
-      <script
-        defer
-        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-      />
+      <script defer src="index.js" />
     </head>
     <body dangerouslySetInnerHTML={{ __html: body }} />
   </html>

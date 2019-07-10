@@ -1,4 +1,4 @@
-import './styles.scss';
+import './styles/index.scss';
 import bulmaCarousel from 'bulma-carousel/dist/js/bulma-carousel';
 import bulmaQuickview from 'bulma-quickview/dist/js/bulma-quickview';
 

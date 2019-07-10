@@ -8,7 +8,7 @@ module.exports = {
     index: './src/index.js',
   },
   output: {
-    filename: 'js/[name].js',
+    filename: '[name].js',
     libraryTarget: 'umd',
   },
   resolve: {
@@ -34,9 +34,24 @@ module.exports = {
             loader: 'css-loader',
           },
           {
+            loader: 'resolve-url-loader',
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
             },
           },
         ],
@@ -52,7 +67,7 @@ module.exports = {
       paths: ['/', '/about/', '/stories/', '/asha-deep/'],
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: '[name].css',
     }),
   ],
 };
