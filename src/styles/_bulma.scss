@@ -1,0 +1,41 @@
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/base/_all.sass';
+
+$blue: #112e57;
+$yellow: #f9c910;
+$grey-dark: hsl(0, 0%, 29%);
+$white-ter: hsl(0, 0%, 96%);
+
+$primary: $blue;
+$info: $yellow;
+$info-invert: black;
+$body-background-color: $white-ter;
+
+$hr-background-color: $info;
+$hr-height: 4px;
+$hr-margin: 15px 0 0 0;
+
+$section-padding: 1rem 0;
+
+$menu-list-link-padding: 0.5em 1.75em;
+$menu-item-active-color: black;
+$menu-item-active-background-color: $info;
+
+$footer-background-color: $primary;
+$footer-color: $grey-lighter;
+$footer-padding: 3rem 1.5rem 1.5rem;
+
+@import 'bulma/sass/components/menu.sass';
+@import 'bulma/sass/elements/box.sass';
+@import 'bulma/sass/elements/button.sass';
+@import 'bulma/sass/elements/container.sass';
+@import 'bulma/sass/elements/content.sass';
+@import 'bulma/sass/elements/image.sass';
+@import 'bulma/sass/elements/title.sass';
+@import 'bulma/sass/grid/columns.sass';
+@import 'bulma/sass/layout/footer.sass';
+@import 'bulma/sass/layout/section.sass';
+
+$quickview-shadow: none;
+@import 'bulma-quickview/dist/css/bulma-quickview.sass';
+@import 'bulma-carousel/src/sass/index.sass';

@@ -1,6 +1,6 @@
 import './styles/index.scss';
-import bulmaCarousel from 'bulma-carousel/dist/js/bulma-carousel';
-import bulmaQuickview from 'bulma-quickview/dist/js/bulma-quickview';
+import bulmaCarousel from 'bulma-carousel';
+import bulmaQuickview from 'bulma-quickview/dist/js/bulma-quickview.min.js';
 
 bulmaCarousel.attach('.slider-container', {
   slidesToShow: 3,
