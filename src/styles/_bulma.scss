@@ -1,6 +1,3 @@
-@import 'bulma/sass/utilities/_all.sass';
-@import 'bulma/sass/base/_all.sass';
-
 $blue: #112e57;
 $yellow: #f9c910;
 $grey-dark: hsl(0, 0%, 29%);
@@ -10,6 +7,9 @@ $primary: $blue;
 $info: $yellow;
 $info-invert: black;
 $body-background-color: $white-ter;
+
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/base/_all.sass';
 
 $hr-background-color: $info;
 $hr-height: 4px;

@@ -1,6 +1,7 @@
 const path = require('path');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const rules = {
   js: {
@@ -91,6 +92,9 @@ module.exports = [
       new MiniCssExtractPlugin({
         filename: '[name].css',
       }),
+      new CopyPlugin([
+        { from: '**/*', to: '', context: 'src/static/' },
+      ]),
     ],
   },
 ];
