@@ -1,7 +1,9 @@
 const path = require('path');
-const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 const rules = {
   js: {
@@ -52,10 +54,6 @@ module.exports = [
       filename: '[name].js',
       libraryTarget: 'umd',
     },
-    devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-      inline: false, // see: https://stackoverflow.com/a/41492420/165674
-    },
     resolve: {
       alias: {
         components: path.resolve(__dirname, 'src/components/'),
@@ -66,12 +64,18 @@ module.exports = [
       rules: [rules.js],
     },
     plugins: [
+      new CleanWebpackPlugin(),
       new StaticSiteGeneratorPlugin({
         entry: 'build',
         globals: {
           window: {},
         },
         paths: ['/', '/about/', '/stories/', '/asha-deep/'],
+      }),
+      new BrowserSyncPlugin({
+        host: 'localhost',
+        port: 8080,
+        server: { baseDir: ['dist'] },
       }),
     ],
   },
@@ -82,9 +86,6 @@ module.exports = [
     output: {
       filename: '[name].js',
     },
-    devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-    },
     module: {
       rules: [rules.js, rules.sass, rules.fonts],
     },
@@ -92,9 +93,7 @@ module.exports = [
       new MiniCssExtractPlugin({
         filename: '[name].css',
       }),
-      new CopyPlugin([
-        { from: '**/*', to: '', context: 'src/static/' },
-      ]),
+      new CopyPlugin([{ from: '**/*', to: '', context: 'src/static/' }]),
     ],
   },
 ];
