@@ -76,6 +76,7 @@ module.exports = {
       paths: ['/', '/about/', '/stories/', '/asha-deep/'],
     }),
     new GenerateSW({
+      exclude: [/\.map$/, /^manifest.*\.js$/, 'build.js', /\.jpg$/, /fonts\/*/],
       importWorkboxFrom: 'local',
       // these options encourage the ServiceWorkers to get in there fast
       // and not allow any straggling "old" SWs to hang around
