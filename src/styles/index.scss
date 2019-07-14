@@ -28,14 +28,36 @@ nav.main-nav {
     justify-content: center;
   }
   .hamburger {
-    left: 0;
+    left: 5.5px;
     top: 11px;
+    padding-left: 9.5px;
+    padding-right: 9.5px;
+    span {
+      background: linear-gradient(
+        to bottom,
+        #f9c910 0%,
+        #f9c910 16.67%,
+        transparent 16.67%,
+        transparent 41.67%,
+        #f9c910 41.67%,
+        #f9c910 58.33%,
+        transparent 58.33%,
+        transparent 83.33%,
+        #f9c910 83.33%,
+        #f9c910 100%
+      );
+      width: 24px;
+      height: 16px;
+    }
   }
   .quickview {
     .close-btn {
       position: absolute;
       left: 8px;
       top: 16px;
+      span:before {
+        content: "\274c";
+      }
     }
     @include tablet {
       max-width: none;

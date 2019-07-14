@@ -28,9 +28,7 @@ const Page = props => {
               data-show="quickview"
               data-target="quickviewDefault"
             >
-              <span className="icon has-text-info">
-                <i className="fas fa-bars" />
-              </span>
+              <span />
             </button>
             <Link href="/">
               <img src="/img/lci-logo.svg" alt="Logo" width="60" />
@@ -49,9 +47,7 @@ const Page = props => {
                 className="close-btn button is-large is-white is-hidden-tablet"
                 data-dismiss="quickview"
               >
-                <span className="icon has-text-primary">
-                  <i className="fas fa-times" />
-                </span>
+                <span />
               </button>
             </header>
 

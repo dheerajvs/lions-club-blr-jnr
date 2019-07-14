@@ -11,8 +11,6 @@ $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/_rotated-flipped.scss';
 @import '@fortawesome/fontawesome-free/scss/_stacked.scss';
 
-.#{$fa-css-prefix}-bars:before { content: fa-content($fa-var-bars); }
-.#{$fa-css-prefix}-times:before { content: fa-content($fa-var-times); }
 .#{$fa-css-prefix}-facebook-f:before { content: fa-content($fa-var-facebook-f); }
 .#{$fa-css-prefix}-twitter:before { content: fa-content($fa-var-twitter); }
 .#{$fa-css-prefix}-instagram:before { content: fa-content($fa-var-instagram); }
@@ -21,6 +19,4 @@ $fa-font-path: '../webfonts';
 .#{$fa-css-prefix}-flickr:before { content: fa-content($fa-var-flickr); }
 
 @import '@fortawesome/fontawesome-free/scss/_screen-reader.scss';
-
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
-@import '@fortawesome/fontawesome-free/scss/solid.scss';
