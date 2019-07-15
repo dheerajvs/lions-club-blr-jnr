@@ -112,15 +112,15 @@ const Page = props => {
               </ul>
               <p className="menu-label">Connect</p>
               <div className="social-btns buttons">
-                {connect.map(([href, title, icon]) => (
+                {connect.map(([href, title]) => (
                   <Link
                     key={href}
-                    className="button has-text-grey"
+                    className="button is-medium"
                     href={href}
                     title={title}
                   >
                     <span className="icon">
-                      <i className={classnames('fab', icon)} />
+                      <img src={`img/${title}.svg`} />
                     </span>
                   </Link>
                 ))}
