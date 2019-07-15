@@ -6,7 +6,44 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
 
-module.exports = {
+const plugins = {
+  common: [
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false,
+    }),
+    new CopyPlugin([{ from: '**/*', to: '', context: 'src/static/' }]),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+    new StaticSiteGeneratorPlugin({
+      entry: 'build',
+      globals: {
+        window: {},
+      },
+      paths: ['/', '/about/', '/stories/', '/asha-deep/'],
+    }),
+  ],
+  development: [
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      open: false,
+      port: 8080,
+      server: { baseDir: ['dist'] },
+    }),
+  ],
+  production: [
+    new GenerateSW({
+      exclude: [/\.map$/, /^manifest.*\.js$/, 'build.js', /\.jpg$/, /fonts\/*/],
+      importWorkboxFrom: 'local',
+      // these options encourage the ServiceWorkers to get in there fast
+      // and not allow any straggling "old" SWs to hang around
+      clientsClaim: true,
+      skipWaiting: true,
+    }),
+  ],
+};
+
+module.exports = (env, argv) => ({
   entry: {
     build: './src/build.js',
     index: './src/index.js',
@@ -62,32 +99,11 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new CopyPlugin([{ from: '**/*', to: '', context: 'src/static/' }]),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-    new StaticSiteGeneratorPlugin({
-      entry: 'build',
-      globals: {
-        window: {},
-      },
-      paths: ['/', '/about/', '/stories/', '/asha-deep/'],
-    }),
-    new GenerateSW({
-      exclude: [/\.map$/, /^manifest.*\.js$/, 'build.js', /\.jpg$/, /fonts\/*/],
-      importWorkboxFrom: 'local',
-      // these options encourage the ServiceWorkers to get in there fast
-      // and not allow any straggling "old" SWs to hang around
-      clientsClaim: true,
-      skipWaiting: true,
-    }),
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      open: false,
-      port: 8080,
-      server: { baseDir: ['dist'] },
-    }),
-  ],
-};
+  plugins: plugins.common.concat(
+    argv.mode === 'development'
+      ? plugins.development
+      : argv.mode === 'production'
+      ? plugins.production
+      : []
+  ),
+});
