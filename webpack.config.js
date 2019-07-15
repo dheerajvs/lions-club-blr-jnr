@@ -86,8 +86,28 @@ module.exports = (env, argv) => ({
         ],
       },
       {
-        test: /\.(jpg|jpeg|png|svg)$/i,
+        test: /\.(png|svg)$/i,
         use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 4096,
+              name: '[name].[ext]',
+              outputPath: 'img/',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.jpe?g$/i,
+        use: [
+          {
+            loader: 'lqip-loader',
+            options: {
+              base64: true,
+              palette: false,
+            },
+          },
           {
             loader: 'url-loader',
             options: {

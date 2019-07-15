@@ -1,6 +1,7 @@
 import React from 'react';
 import Page from 'components/Page';
 import Link from 'components/Link';
+import clubImg from '../img/club.jpg';
 
 const Index = props => {
   const {
@@ -18,7 +19,7 @@ const Index = props => {
         <section className="section">
           <div className="box px-0 pt-0">
             <figure className="image">
-              <img className="round-top" src="/img/club.jpg" alt="Club Photo" />
+              <img className="round-top" src={clubImg.preSrc} alt="Club Photo" />
             </figure>
             <p className="p-4">
               Lions Club of Bangalore Jayanagar (LCBJ) District 317A was
