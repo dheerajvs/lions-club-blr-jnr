@@ -86,13 +86,14 @@ module.exports = (env, argv) => ({
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(jpg|jpeg|png|svg)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
+              limit: 4096,
               name: '[name].[ext]',
-              outputPath: 'fonts/',
+              outputPath: 'img/',
             },
           },
         ],

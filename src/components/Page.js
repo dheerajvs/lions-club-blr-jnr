@@ -2,6 +2,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
 import Link from 'components/Link';
+import Facebook from '../img/Facebook.svg';
+import Twitter from '../img/Twitter.svg';
+import Instagram from '../img/Instagram.svg';
+import YouTube from '../img/YouTube.svg';
+import LinkedIn from '../img/LinkedIn.svg';
+import Flickr from '../img/Flickr.svg';
+
+const icons = {
+  Facebook,
+  Twitter,
+  Instagram,
+  YouTube,
+  LinkedIn,
+  Flickr,
+};
 
 const Page = props => {
   const { data, path, children } = props;
@@ -120,7 +135,7 @@ const Page = props => {
                     title={title}
                   >
                     <span className="icon">
-                      <img src={`img/${title}.svg`} />
+                      <img src={icons[title]} alt={title} />
                     </span>
                   </Link>
                 ))}
