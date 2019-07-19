@@ -39,3 +39,15 @@ $footer-padding: 3rem 1.5rem 1.5rem;
 $quickview-shadow: none;
 @import 'bulma-quickview/dist/css/bulma-quickview.sass';
 @import 'bulma-carousel/src/sass/index.sass';
+
+.image {
+  &.is-9by4 img,
+  .has-ratio {
+    @extend %overlay;
+    height: 100%;
+    width: 100%;
+  }
+  &.is-9by4 {
+    padding-top: 44.44%;
+  }
+}

@@ -18,8 +18,14 @@ const Index = props => {
         </header>
         <section className="section">
           <div className="box px-0 pt-0">
-            <figure className="image">
-              <img className="round-top" src={clubImg.preSrc} alt="Club Photo" />
+            <figure
+              className="image is-9by4"
+              style={{
+                backgroundImage: `url(${clubImg.preSrc})`,
+                backgroundSize: 'cover',
+              }}
+            >
+              <img className="round-top" src={clubImg.src} alt="Club Photo" />
             </figure>
             <p className="p-4">
               Lions Club of Bangalore Jayanagar (LCBJ) District 317A was
