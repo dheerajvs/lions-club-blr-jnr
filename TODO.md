@@ -3,17 +3,18 @@
 - Donors list
 
 # Features
--[ ] Optimize JPEG; Lossless crop to aspect ratio
 -[ ] Pure CSS hamburger menu
--[ ] SVGO
--[ ] lqip-loader
 -[ ] Carousel alternative
+-[ ] Inline SVG
 -[ ] responsive-loader
 -[ ] Netlify CMS
 -[ ] Meta tags
 -[ ] SEO
 -[ ] Web Payments API
   -[ ] UPI payments
+-[x] Optimize JPEG; Lossless crop to aspect ratio
+-[x] SVGO
+-[x] lqip-loader
 -[x] Static site generation
 -[x] Manifest
 -[x] Service Worker

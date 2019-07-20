@@ -124,6 +124,16 @@ section.slider-container {
 }
 
 .lci {
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+  .menu-label {
+    font-size: 0.75rem;
+  }
+  .social-btns {
+    padding: $menu-list-link-padding;
+  }
   @include mobile {
     padding-left: 16px !important;
     padding-right: 16px !important;
@@ -136,12 +146,10 @@ section.slider-container {
     .button {
       font-size: $size-small;
     }
-  }
-  .menu-label {
-    font-size: 0.75rem;
-  }
-  .social-btns {
-    padding: $menu-list-link-padding;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 

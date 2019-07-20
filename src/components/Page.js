@@ -2,12 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
 import Link from 'components/Link';
-import Facebook from '../img/Facebook.svg';
-import Twitter from '../img/Twitter.svg';
-import Instagram from '../img/Instagram.svg';
-import YouTube from '../img/YouTube.svg';
-import LinkedIn from '../img/LinkedIn.svg';
-import Flickr from '../img/Flickr.svg';
+import lciLogoUrl from '../img/lci-logo_url.svg';
+import lciSigUrl from '../img/lci-sig.png';
+import Facebook from 'react-svg-loader!../img/Facebook.svg';
+import Twitter from 'react-svg-loader!../img/Twitter.svg';
+import Instagram from 'react-svg-loader!../img/Instagram.svg';
+import YouTube from 'react-svg-loader!../img/YouTube.svg';
+import LinkedIn from 'react-svg-loader!../img/LinkedIn.svg';
+import Flickr from 'react-svg-loader!../img/Flickr.svg';
 
 const icons = {
   Facebook,
@@ -46,7 +48,7 @@ const Page = props => {
               <span />
             </button>
             <Link href="/">
-              <img src="/img/lci-logo.svg" alt="Logo" width="60" />
+              <img src={lciLogoUrl} alt="Logo" width="60" />
             </Link>
           </div>
 
@@ -56,7 +58,7 @@ const Page = props => {
           >
             <header className="quickview-header columns is-centered is-mobile is-marginless">
               <Link className="column is-narrow" href="/">
-                <img src="/img/lci-logo.svg" alt="Logo" width="60" />
+                <img src={lciLogoUrl} alt="Logo" width="60" />
               </Link>
               <button
                 className="close-btn button is-large is-white is-hidden-tablet"
@@ -135,7 +137,10 @@ const Page = props => {
                     title={title}
                   >
                     <span className="icon">
-                      <img src={icons[title]} alt={title} />
+                      {icons[title]({
+                        viewBox: '0 0 32 32',
+                        styles: {},
+                      })}
                     </span>
                   </Link>
                 ))}
@@ -164,7 +169,7 @@ const Page = props => {
           <div className="lci-footer column">
             <img
               className="has-text-centered"
-              src="/img/LCI_primary_sig_white.png"
+              src={lciSigUrl}
               alt="Logo"
               width="200"
             />
