@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import 'bulma';
+@import 'menu';
 
 abbr {
   text-decoration: none;
@@ -8,70 +9,6 @@ abbr {
 
 hr {
   width: 68px;
-}
-
-nav.main-nav {
-  position: sticky;
-  top: -$column-gap;
-  z-index: 1;
-  @include mobile {
-    background-color: $primary;
-    height: 56px;
-  }
-  @include tablet {
-    background-color: white;
-    max-width: 240px;
-    align-self: flex-start;
-  }
-  .mobile-nav {
-    justify-content: center;
-  }
-  .hamburger {
-    left: 5.5px;
-    top: 11px;
-    padding-left: 9.5px;
-    padding-right: 9.5px;
-    span {
-      background: linear-gradient(
-        to bottom,
-        #f9c910 0%,
-        #f9c910 16.67%,
-        transparent 16.67%,
-        transparent 41.67%,
-        #f9c910 41.67%,
-        #f9c910 58.33%,
-        transparent 58.33%,
-        transparent 83.33%,
-        #f9c910 83.33%,
-        #f9c910 100%
-      );
-      width: 24px;
-      height: 16px;
-    }
-  }
-  .quickview {
-    .close-btn {
-      position: absolute;
-      left: 8px;
-      top: 16px;
-      span:before {
-        content: '\274c';
-      }
-    }
-    @include tablet {
-      max-width: none;
-      position: static;
-      width: unset;
-    }
-  }
-  .quickview-body .menu {
-    @include mobile {
-      font-size: $size-medium;
-    }
-  }
-  .quickview-footer {
-    justify-content: center;
-  }
 }
 
 article {

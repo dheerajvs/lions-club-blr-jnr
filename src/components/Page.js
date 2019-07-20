@@ -37,66 +37,43 @@ const Page = props => {
           role="navigation"
           aria-label="main navigation"
         >
-          <div className="mobile-nav is-flex is-hidden-tablet">
-            <button
-              className="hamburger button is-medium is-primary is-absolute"
-              aria-label="menu"
-              aria-expanded="false"
-              data-show="quickview"
-              data-target="quickviewDefault"
-            >
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <div class="hamburger">
               <span />
-            </button>
-            <Link href="/">
+              <span />
+              <span />
+            </div>
+            <Link className="logo" href="/">
               <img src={lciLogoUrl} alt="Logo" width="60" />
             </Link>
-          </div>
-
-          <div
-            id="quickviewDefault"
-            className="quickview is-left is-marginless"
-          >
-            <header className="quickview-header columns is-centered is-mobile is-marginless">
-              <Link className="column is-narrow" href="/">
-                <img src={lciLogoUrl} alt="Logo" width="60" />
-              </Link>
-              <button
-                className="close-btn button is-large is-white is-hidden-tablet"
-                data-dismiss="quickview"
-              >
-                <span />
-              </button>
-            </header>
-
-            <div className="quickview-body">
-              <div className="menu">
-                <ul className="menu-list">
-                  {navMenu.map(href => (
-                    <li key={href}>
-                      <Link
-                        className={classnames({
-                          'is-active': path === href,
-                        })}
-                        href={href}
-                      >
-                        {links[href]}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+            <div className="menu-backdrop" />
+            <div className="menu">
+              <ul className="menu-list">
+                {navMenu.map(href => (
+                  <li key={href}>
+                    <Link
+                      className={classnames({
+                        'is-active': path === href,
+                      })}
+                      href={href}
+                    >
+                      {links[href]}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="menu-footer">
+                <div className="buttons is-centered">
+                  <Link className="button is-primary" href="#">
+                    Join us
+                  </Link>
+                  <Link className="button is-info" href="#">
+                    Donate
+                  </Link>
+                </div>
               </div>
             </div>
-
-            <footer className="quickview-footer">
-              <div className="buttons is-centered">
-                <Link className="button is-primary" href="#">
-                  Join us
-                </Link>
-                <Link className="button is-info" href="#">
-                  Donate
-                </Link>
-              </div>
-            </footer>
           </div>
         </nav>
 

@@ -1,0 +1,185 @@
+nav.main-nav {
+  position: sticky;
+  top: -$column-gap;
+
+  padding: 0 !important;
+
+  z-index: 30;
+
+  @include mobile {
+    background-color: $primary;
+    height: 56px;
+  }
+  @include tablet {
+    background-color: white;
+    max-width: 240px;
+    align-self: flex-start;
+  }
+}
+
+// Adapted from https://codepen.io/erikterwan/pen/EVzeRP
+// Credit for original code: Erik Terwan
+
+#menuToggle {
+  display: block;
+  user-select: none;
+
+  input {
+    display: block;
+    position: absolute;
+    left: 4.5px;
+    width: 45px;
+    height: 45px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 1; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  // Just a quick hamburger
+
+  .hamburger {
+    position: absolute;
+    margin-top: $column-gap;
+    left: 15px;
+    top: 14px;
+
+    @include tablet {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2.67px;
+      margin-bottom: 4px;
+      position: relative;
+
+      background: $info;
+      border-radius: 1.33px;
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    }
+
+    span:first-child {
+      transform-origin: 2.67px 0%;
+    }
+
+    span:last-child {
+      margin-bottom: 0;
+      transform-origin: 1px 100%;
+    }
+  }
+
+  // Transform all the slices of hamburger into a crossmark.
+
+  input:checked ~ .hamburger span {
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  // But let's hide the middle one.
+
+  input:checked ~ .hamburger span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  // Oh yeah and the last one should go the other direction
+
+  input:checked ~ .hamburger span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .logo {
+    position: absolute;
+    margin-top: $column-gap;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 1;
+
+    @include tablet {
+      top: $column-gap;
+    }
+  }
+
+  .menu-backdrop {
+    position: fixed;
+    top: 44px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s;
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+    -webkit-font-smoothing: antialiased;
+    // to stop flickering of text in safari
+
+    @include tablet {
+      padding-top: 104px;
+    }
+
+    @include mobile {
+      position: fixed;
+      top: 44px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      max-width: 80%;
+      padding-top: 22px;
+
+      box-shadow: 5px 0px 13px 3px rgba(0, 0, 0, 0.1);
+      font-size: $size-medium;
+
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+
+    .menu-list {
+      box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
+      flex: 1 1 0%;
+      overflow-y: auto;
+    }
+
+    .menu-footer {
+      padding: 16px;
+    }
+  }
+
+  // And let's slide it in from the left
+
+  input:checked ~ .menu {
+    transform: none;
+  }
+
+  input:checked ~ .menu-backdrop {
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

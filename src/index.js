@@ -1,6 +1,5 @@
 import './styles/index.scss';
 import bulmaCarousel from 'bulma-carousel';
-import bulmaQuickview from 'bulma-quickview/dist/js/bulma-quickview.min.js';
 
 bulmaCarousel.attach('.slider-container', {
   slidesToShow: 3,
@@ -33,8 +32,6 @@ bulmaCarousel.attach('.slider-container', {
     },
   ],
 });
-
-bulmaQuickview.attach();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
