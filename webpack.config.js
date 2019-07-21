@@ -20,7 +20,7 @@ const plugins = {
       globals: {
         window: {},
       },
-      paths: ['/', '/about/', '/stories/', '/asha-deep/'],
+      paths: ['/', '/about/', '/stories/', '/asha-deep/', '/404.html'],
     }),
   ],
   development: [

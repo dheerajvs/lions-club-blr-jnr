@@ -6,6 +6,7 @@ import Index from 'pages/Index';
 import About from 'pages/About';
 import Stories from 'pages/Stories';
 import AshaDeep from 'pages/AshaDeep';
+import NotFound from 'pages/404';
 import * as data from './data';
 
 const routes = {
@@ -13,6 +14,7 @@ const routes = {
   '/about/': About,
   '/stories/': Stories,
   '/asha-deep/': AshaDeep,
+  '/404.html': NotFound,
 };
 
 export default locals => {
