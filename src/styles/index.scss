@@ -61,15 +61,17 @@ section.slider-container {
 }
 
 .lci {
-  svg {
-    width: 30px;
-    height: 30px;
-  }
   .menu-label {
     font-size: 0.75rem;
   }
   .social-btns {
     padding: $menu-list-link-padding;
+  }
+  .button {
+    border: none;
+    font-size: 1.875rem;
+    height: unset;
+    padding: 0 12.25px;
   }
   @include mobile {
     padding-left: 16px !important;
@@ -79,13 +81,12 @@ section.slider-container {
     margin-top: 115px;
   }
   @media (pointer: fine) {
-    .menu,
-    .button {
+    .menu {
       font-size: $size-small;
     }
-    svg {
-      width: 18px;
-      height: 18px;
+    .button {
+      font-size: calc(4rem / 3);
+      padding: 0 9px;
     }
   }
 }

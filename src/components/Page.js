@@ -4,12 +4,12 @@ import classnames from 'classnames';
 import Link from 'components/Link';
 import lciLogoUrl from '../img/lci-logo_url.svg';
 import lciSigUrl from '../img/lci-sig.png';
-import Facebook from 'react-svg-loader!../img/Facebook.svg';
-import Twitter from 'react-svg-loader!../img/Twitter.svg';
-import Instagram from 'react-svg-loader!../img/Instagram.svg';
-import YouTube from 'react-svg-loader!../img/YouTube.svg';
-import LinkedIn from 'react-svg-loader!../img/LinkedIn.svg';
-import Flickr from 'react-svg-loader!../img/Flickr.svg';
+import Facebook from 'react-svg-loader!super-tiny-icons/images/svg/facebook.svg';
+import Twitter from 'react-svg-loader!super-tiny-icons/images/svg/twitter.svg';
+import Instagram from 'react-svg-loader!super-tiny-icons/images/svg/instagram.svg';
+import YouTube from 'react-svg-loader!super-tiny-icons/images/svg/youTube.svg';
+import LinkedIn from 'react-svg-loader!super-tiny-icons/images/svg/linkedIn.svg';
+import Flickr from 'react-svg-loader!super-tiny-icons/images/svg/flickr.svg';
 
 const icons = {
   Facebook,
@@ -109,13 +109,13 @@ const Page = props => {
                 {connect.map(([href, title]) => (
                   <Link
                     key={href}
-                    className="button is-medium"
+                    className="button"
                     href={href}
                     title={title}
                   >
                     <span className="icon">
                       {icons[title]({
-                        viewBox: '0 0 32 32',
+                        viewBox: '0 0 512 512',
                         styles: {},
                       })}
                     </span>
