@@ -7,8 +7,8 @@ import lciSigUrl from '../img/lci-sig.png';
 import Facebook from 'react-svg-loader!super-tiny-icons/images/svg/facebook.svg';
 import Twitter from 'react-svg-loader!super-tiny-icons/images/svg/twitter.svg';
 import Instagram from 'react-svg-loader!super-tiny-icons/images/svg/instagram.svg';
-import YouTube from 'react-svg-loader!super-tiny-icons/images/svg/youTube.svg';
-import LinkedIn from 'react-svg-loader!super-tiny-icons/images/svg/linkedIn.svg';
+import YouTube from 'react-svg-loader!super-tiny-icons/images/svg/youtube.svg';
+import LinkedIn from 'react-svg-loader!super-tiny-icons/images/svg/linkedin.svg';
 import Flickr from 'react-svg-loader!super-tiny-icons/images/svg/flickr.svg';
 
 const icons = {
