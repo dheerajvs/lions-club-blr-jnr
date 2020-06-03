@@ -1,10 +1,13 @@
 [
-  { "title": "President", "officer": "Manjunath K. S." },
-  { "title": "\u2160 Vice President", "officer": "Vijayakumar A." },
-  { "title": "\u2161 Vice President", "officer": "Mallikarjun H. R." },
-  { "title": "\u2162 Vice President", "officer": "Gundappa Ramesh" },
-  { "title": "Secretary", "officer": "C. S. Raghavan" },
-  { "title": "Joint Secretary", "officer": "H. R. Keshava" },
-  { "title": "Treasurer", "officer": "Mallikarjun H. R." },
-  { "title": "Administrator", "officer": "Sowmya B. A." }
+  { "title": "President", "officer": "Vijay Kumar D." },
+  { "title": "\u2160 Vice President", "officer": "Mallikarjun H. R." },
+  { "title": "\u2161 Vice President", "officer": "Harshavardhan Naidu" },
+  { "title": "\u2162 Vice President", "officer": "Kumar Srinivas" },
+  { "title": "Secretary", "officer": "Sowmya B. A." },
+  { "title": "Joint Secretary", "officer": "Keshav Prasad H. R." },
+  { "title": "Treasurer", "officer": "Krishna Prasad T. K." },
+  { "title": "Club Administrator", "officer": "Nagaraj L." },
+  { "title": "Advisor", "officer": "Dr. Prabha Murthy - PMJF, 1st VDG" },
+  { "title": "Mentor", "officer": "C. Hemanth Kumar - PMJF, PDG" },
+  { "title": "LCIF Co-ordinator", "officer": "Manju Nath K. S." }
 ]
