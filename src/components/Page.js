@@ -39,7 +39,7 @@ const Page = props => {
         >
           <div id="menuToggle">
             <input type="checkbox" />
-            <div class="hamburger">
+            <div className="hamburger">
               <span />
               <span />
               <span />
@@ -161,7 +161,7 @@ const Page = props => {
         <p className="is-size-7 has-text-centered">
           Website developed by{' '}
           <Link
-            class="author"
+            className="author"
             href="https://github.com/dheerajvs/lions-club-blr-jnr"
           >
             Dheeraj Vepakomma

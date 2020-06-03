@@ -3,7 +3,7 @@ import React from 'react';
 const Html = ({ helmet, body }) => (
   <html lang="en">
     <head>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="theme-color" content="#112e57" />
